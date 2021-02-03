@@ -1,0 +1,176 @@
+---
+layout: table_wrappers
+---
+
+<!DOCTYPE html>
+
+<html lang="{{ site.lang | default: 'en-US' }}">
+{% include head.html %}
+<body>
+  {% include svg.html %}
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% include nav.html %}
+    </nav>
+    <footer class="site-footer">
+      {% if site.nav_footer_content != nil %}
+      {{ site.nav_footer_content }}
+      {% endif %}
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      {% if site.search_enabled != false %}
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <!-- <div id="search-results" class="search-results"></div> -->
+          <div class="js-search-results search-results-wrap"></div>
+        </div>
+      {% endif %}
+      {% if site.aux_links %}
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            {% for link in site.aux_links %}
+              <li class="aux-nav-list-item">
+                <a href="{{ link.url }}" class="site-button"
+                  {% if link.new_tab == true %}
+                  target="_blank" rel="noopener noreferrer nofollow"
+                  {% endif %}
+                >
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      {% unless page.url == "/" %}
+        {% if page.parent %}
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              {% if page.grand_parent %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
+              {% else %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+              {% endif %}
+              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+            </ol>
+          </nav>
+        {% endif %}
+      {% endunless %}
+      <div id="main-content" class="main-content" role="main">
+        <h1>{{ page.title }}</h1>
+        {% if page.post_video %}
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/{{ page.post_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if page.post_playlist %}
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list={{ page.post_playlist }}" modestbranding="1" frameborder="0" theme="dark" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if page.post_photo_path %}
+        <img class="post-img" src="{{ page.post_photo_path }}" alt="{{ page.title }}">
+        {% endif %}
+        {% if site.heading_anchors != false %}
+          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+
+        {% if page.has_children == true and page.has_toc != false %}
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          <ul>
+            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
+            {% for child in children_list %}
+              <li>
+                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.edit %}
+        {% if site.last_edit_timestamp or site.gh_edit_link %}
+          <div class="d-flex mt-2">
+            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+              <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
+              </p>
+            {% endif %}
+            {% if
+              site.gh_edit_link and
+              site.gh_edit_link_text and
+              site.gh_edit_repository and
+              site.gh_edit_branch and
+              site.gh_edit_view_mode
+            %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                <a class="btn fs-3 my-4" href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
+              </p>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% endif %}
+
+        {% if site.disqus_shortname %}
+          {% include disqus.html %}
+        {% endif %}
+
+        {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
+          <hr>
+          <footer>
+            {% if site.footer_content != nil %}
+              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+            {% endif %}
+          </footer>
+        {% endif %}
+
+      </div>
+    </div>
+
+    {% if site.search_enabled != false %}
+      {% if site.search.button %}
+        <a href="#" id="search-button" class="search-button">
+          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
+        </a>
+      {% endif %}
+
+      <div class="search-overlay"></div>
+    {% endif %}
+  </div>
+
+  {% if site.back_to_top %}
+  <div id="scrollup">&uarr;</div>
+  {% endif %}
+  <script src="https://use.fontawesome.com/releases/v5.10.1/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  {% if site.search_enabled != false %}
+  <script src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/vendor/lunr.stemmer.support.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/vendor/lunr.ru.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/vendor/lunr.multi.min.js' | absolute_url }}"></script>
+  {% endif %}
+  <script src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  {% if site.ya_metrika != '' %}
+  <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym({{ site.ya_metrika }}, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/{{ site.ya_metrika }}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  {% endif %}
+</body>
+</html>

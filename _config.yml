@@ -1,0 +1,127 @@
+title: Ctlos Linux
+description: Официальный сайт Ctlos Linux
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ctlos.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+lang: ru-RU
+
+github_repo_url: https://github.com/ctlos/ctlos.github.io
+disqus_shortname: ctlos
+
+permalink: /:title/
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: /assets/img/logo.svg
+
+# Enable or disable the site search
+search_enabled: true
+
+# Set the search token separator for hyphenated-word search:
+search_tokenizer_separator: /[\s/]+/
+
+# Enable or disable heading anchors
+heading_anchors: true
+
+# nav footer
+nav_footer_content: "Cloud <a target=\"\_blank\" href=\"https://m.do.co/c/49c4dbf3d0ca\">100$ free</a>"
+
+# Aux links for the upper right navigation
+aux_links:
+  - title: Поддержать
+    url: /donat
+  - title: Скачать
+    url: /get
+  - title: Обновления
+    url: /wiki/changelog
+  - title: Сообщество
+    url: /wiki/#ресурсы-ctlos
+    new_tab: true
+
+# Makes Aux links open in a new tab. Default is false
+
+# Sort order for navigation links
+nav_sort: case_insensitive # default, equivalent to nil
+# nav_sort: case_sensitive # Capital letters sorted before lowercase
+
+# Footer content
+back_to_top: true
+
+footer_content: "Copyright &copy; <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true
+gh_edit_link_text: "Отредактировать эту страницу на GitHub"
+gh_edit_repository: "https://github.com/ctlos/ctlos.github.io"
+gh_edit_branch: "master"
+gh_edit_view_mode: "tree"
+
+# Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
+color_scheme: dark
+
+google_analytics: UA-90439782-2
+ya_metrika: 47541358
+google_verification: 6GXUozcEfaPdh8Qcr-0qBY2AV8MkL-QoQ66FpbytieM
+yandex_verification: 3051c5823192d0b9
+
+plugins:
+  - jekyll-menus
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-target-blank
+  - jemoji
+
+feed:
+  path: wiki/feed.xml
+  disable: false
+
+target-blank:
+  rel: nofollow
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /assets/img/post.png
+      comments: true
+      edit: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      _comments:
+        type: Marks the impact of this release
+
+types:
+  - major
+  - minor
+  - patch
+
+exclude:
+  - "node_modules/"
+  - "*.gemspec"
+  - "*.gem"
+  - "Rakefile"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "package.json"
+  - "package-lock.json"
+  - "LICENSE.txt"
+  - "README.md"
+  - "lib/"
+  - "_compress_images_cache.yml"

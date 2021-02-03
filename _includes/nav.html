@@ -1,0 +1,20 @@
+<ul class="nav-list">
+  <li class="nav-list-item{% if page.url == '/wiki' %} active{% endif %}">
+    <a href="/wiki" class="nav-list-link{% if page.url == '/wiki' %} active{% endif %}">Ctlos Wiki</a>
+  </li>
+{% for item in site.menus.sidebar_nav %}
+  <li class="nav-list-item{% if page.url contains item.identifier %} active{% endif %}">
+    <a href="#" class="nav-list-expander nav-title"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+    <a href="#" class="nav-list-link nav-title">{{ item.title }}</a>
+    {% if item.children %}
+      <ul class="nav-list">
+      {% for item in item.children %}
+        <li class="nav-list-item{% if page.url == item.url %} active{% endif %}">
+          <a href="{{ item.url }}" class="nav-list-link{% if page.url == item.url %} active{% endif %}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

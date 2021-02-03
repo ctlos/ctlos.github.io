@@ -1,0 +1,49 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  {% if page.image %}
+  <meta property="vk:image" content="{{ page.image | absolute_url }}" />
+  {% else %}
+  <meta property="vk:image" content="{{ site.image | absolute_url }}" />
+  {% endif %}
+
+  {% feed_meta %}
+
+  <link rel="shortcut icon" href="{{ '/assets/img/favicon/favicon.ico' | absolute_url }}" type="image/x-icon">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon/mstile-310x310.png" sizes="310x310">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon/favicon-128.png" sizes="128x128">
+  <meta name="application-name" content="Ctlos Linux">
+  <meta name="apple-mobile-web-app-title" content="Ctlos Linux">
+  <meta name="msapplication-TileColor" content="#5a74ca">
+  <meta name="msapplication-square310x310logo" content="{{ site.url }}/assets/img/favicon/mstile-310x310.png">
+  <meta name="msapplication-config" content="{{ site.url }}/assets/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#5a74ca">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i%7CRoboto:400,400i,700,700i&amp;subset=cyrillic">
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | absolute_url }}">
+
+  {% if site.google_analytics != '' %}
+  <script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+  <script>
+    var galite = galite || {};
+    galite.UA = '{{ site.google_analytics }}';
+  </script>
+  {% endif %}
+
+  {% if site.google_verification != '' %}
+  <meta name="google-site-verification" content="{{ site.google_verification }}" />
+  {% endif %}
+  {% if site.yandex_verification != '' %}
+  <meta name="yandex-verification" content="{{ site.yandex_verification }}" />
+  {% endif %}
+
+  {% include head_custom.html %}
+</head>
