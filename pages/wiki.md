@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ctlos Linux Wiki
-permalink: /wiki
+permalink: /wiki/
 edit: false
 ---
 

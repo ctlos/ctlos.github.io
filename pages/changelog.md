@@ -2,7 +2,7 @@
 layout: page
 title: Лог Изменений
 description: История измененя Ctlos, релизы
-permalink: /wiki/changelog
+permalink: /wiki/changelog/
 comments: false
 edit: false
 ---

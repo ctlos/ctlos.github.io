@@ -2,7 +2,7 @@
 layout: page
 title: Поддержать развитие проекта
 description: Помочь развитию проекта и сообщества.
-permalink: /donat
+permalink: /donat/
 comments: false
 edit: false
 ---

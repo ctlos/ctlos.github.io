@@ -2,7 +2,7 @@
 layout: page
 title: Скачать ctlos — страница загрузки
 description: Актуальные релизы для скачивания всегда представлены на данной странице.
-permalink: /get
+permalink: /get/
 comments: false
 edit: false
 ---
