@@ -4,6 +4,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ctlos.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 lang: ru-RU
 
+destination: ./build
+
 github_repo_url: https://github.com/ctlos/ctlos.github.io
 disqus_shortname: ctlos
 
