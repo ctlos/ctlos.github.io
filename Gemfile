@@ -5,6 +5,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "bundler"
 gem "jekyll"
 gem "rake"
+gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
   gem "jekyll-menus"
