@@ -90,3 +90,15 @@ Server = https://github.com/ctlos/$repo/raw/dev/$arch
 Server = https://osdn.net/projects/ctlos/storage/$repo/$arch
 Server = https://cvc.keybase.pub/$repo
 ```
+
+## Ctlos aur
+
+Можете воспользоваться [Ctlos aur](https://dev.ctlos.ru/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
+
+```bash
+nano /etc/pacman.conf
+
+[ctlos-aur]
+SigLevel = Optional TrustAll
+Server = https://dev.ctlos.ru/ctlos-aur
+```

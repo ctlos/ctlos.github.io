@@ -22,4 +22,5 @@ edit: false
 - [OSDN releases](https://osdn.net/projects/ctlos/releases/)
 - [Github releases](https://github.com/ctlos/ctlosiso/releases)
 
-[Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).
+> [Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).
+{:.warning}
