@@ -102,3 +102,5 @@ nano /etc/pacman.conf
 SigLevel = Optional TrustAll
 Server = https://dev.ctlos.ru/ctlos-aur
 ```
+
+> Если Вы заметите какие-либо проблемы в репозиториях, сообщите в [Telegram Chat](https://telegram.me/ctlos).
