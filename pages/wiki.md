@@ -51,9 +51,9 @@ Ctlos Linux — базируется на Arch Linux, iso образ собр�
 - [Discord](https://discord.com/invite/m6uFRp4)
 - [Паблик VK](https://vk.com/ctlos)
 - [Forum Ctlos](https://forum.ctlos.ru)
-- [Баг трекер](https://github.com/ctlos/ctlosiso/issues)
 - [Дорожная карта](https://github.com/orgs/ctlos/projects/3)
-- [Status services](https://status.ctlos.ru/ru)
+- [Баг трекер](https://github.com/ctlos/ctlosiso/issues)
+- [Status services](https://status.ctlos.ru)
 - [Исходный код сайта](https://github.com/ctlos/ctlos.github.io)
 - [YouTube канал автора](https://youtube.com/channel/UCPCp_ZnMKEwYdnA_YfOZrZg?sub_confirmation=1)
 
