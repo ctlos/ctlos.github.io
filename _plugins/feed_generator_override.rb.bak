@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# _config.yml
+# feed:
+#   path: wiki/feed.xml
+#   disable: true
+
 module JekyllFeed
   class Generator < Jekyll::Generator
     safe true

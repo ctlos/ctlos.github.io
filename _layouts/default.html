@@ -11,7 +11,7 @@ layout: table_wrappers
 
   <div class="side-bar">
     <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
@@ -56,36 +56,11 @@ layout: table_wrappers
       {% endif %}
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
-      {% unless page.url == "/" %}
-        {% if page.parent %}
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-              {% endif %}
-              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-            </ol>
-          </nav>
-        {% endif %}
-      {% endunless %}
       <div id="main-content" class="main-content" role="main">
         <h1>{{ page.title }}</h1>
-        {% if page.post_video %}
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/{{ page.post_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        {% endif %}
-        {% if page.post_playlist %}
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list={{ page.post_playlist }}" modestbranding="1" frameborder="0" theme="dark" allowfullscreen></iframe>
-        </div>
-        {% endif %}
-        {% if page.post_photo_path %}
-        <img class="post-img" src="{{ page.post_photo_path }}" alt="{{ page.title }}">
-        {% endif %}
+
+        {% include media.html %}
+
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}
         {% else %}
@@ -105,28 +80,7 @@ layout: table_wrappers
           </ul>
         {% endif %}
 
-        {% if page.edit %}
-        {% if site.last_edit_timestamp or site.gh_edit_link %}
-          <div class="d-flex mt-2">
-            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-              <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-              </p>
-            {% endif %}
-            {% if
-              site.gh_edit_link and
-              site.gh_edit_link_text and
-              site.gh_edit_repository and
-              site.gh_edit_branch and
-              site.gh_edit_view_mode
-            %}
-              <p class="text-small text-grey-dk-000 mb-0">
-                <a class="btn fs-3 my-4" href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
-              </p>
-            {% endif %}
-          </div>
-        {% endif %}
-        {% endif %}
+        {% include edit.html %}
 
         {% if site.disqus_shortname %}
           {% include disqus.html %}
@@ -155,22 +109,6 @@ layout: table_wrappers
     {% endif %}
   </div>
 
-  {% if site.back_to_top %}
-  <div id="scrollup">&uarr;</div>
-  {% endif %}
-  <script src="https://use.fontawesome.com/releases/v5.10.1/js/all.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  {% if site.search_enabled != false %}
-  <script src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/js/vendor/lunr.stemmer.support.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/js/vendor/lunr.ru.min.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/js/vendor/lunr.multi.min.js' | absolute_url }}"></script>
-  {% endif %}
-  <script src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-
-  {% if site.ya_metrika != '' %}
-  <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym({{ site.ya_metrika }}, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/{{ site.ya_metrika }}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  {% endif %}
+  {% include footer.html %}
 </body>
 </html>

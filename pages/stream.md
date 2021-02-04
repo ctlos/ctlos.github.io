@@ -1,16 +1,12 @@
 ---
 layout: page
-title: Alex Creio Stream
+title: Live Stream @cretm
 permalink: /stream/
 post_video:
-post_photo_path:
-nav_exclude: true
 search_exclude: true
 comments: false
 edit: false
 ---
-
-# Live Stream @cretm
 
 <!-- <div class="embed-responsive embed-responsive-16by9">
   <iframe src="https://www.youtube.com/embed/ljRDkQVOlqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

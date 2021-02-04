@@ -10,7 +10,7 @@ edit: false
 Подпишись, чтобы быть в кусе новостей.
 
 - Группа в VK: [vk.com/ctlos](https://vk.com/ctlos)
-- Telegram канал: [t.me/ctlos_info](https://t.me/ctlos_info)
+- Telegram канал: [t.me/ctlos_info](https://telegram.me/ctlos_info)
 - Подпишись на: [RSS](https://ctlos.github.io/wiki/feed.xml)
 
 > Последние и наиболее актуальные версии представлены на странице загрузки [ctlos.github.io/get](/get).
