@@ -32,6 +32,9 @@ defaults:
       path: ""
       type: "posts"
     values:
+      layout: post
+      permalink: /wiki/changelog/:title/
+      edit: false
       _comments:
         type: Marks the impact of this release
 
