@@ -6,6 +6,8 @@ Fork [Just the Docs](https://pmarsceill.github.io/just-the-docs/).
 
 ## Installation
 
+[Ruby#Setup](https://wiki.archlinux.org/index.php/Ruby#Setup).
+
 ```bash
 sudo pacman -S ruby
 
