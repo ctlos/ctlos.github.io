@@ -21,6 +21,10 @@ edit: false
 
 [Свяжитесь с нами](/wiki/#контакты), если у Вас есть предложения, или пожелания.
 
+## Поддержи проект
+
+- [Donate](/donat/).
+
 <div class="changelog">
 	{% for change in site.posts %}
 		<div class="changelog_item">

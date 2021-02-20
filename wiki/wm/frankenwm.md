@@ -16,11 +16,11 @@ menus:
 
 ## Скачать iso образ
 
-- Скачать [Ctlos FrankenWm](/get)
+> Данный оконный менеджер доступен в `xfce iso`, метод online установки.
 
-Установка: `super+d` rofi, набрать `calamares` Enter.
+- [Скачать](/get)
 
-> Рекомендации после установки [next-install](/wiki/install/next-install/).
+> Рекомендации после установки [next-install](/wiki/install/next-install).
 
 ## Конфигурационные файлы
 
@@ -28,7 +28,7 @@ menus:
 --- | ---
 ~/.config/frankenwm/src/config.h | Основной конфиг.
 ~/.config/frankenwm/autostart    | Скрипт автостарта.
-~/.config/polybar/               | Конфиг и скрипты.
+~/.config/frankenwm/polybar/     | Конфиг и скрипты polybar.
 
 > Данный `wm` необходимо перекомпилировать после изменения `config.h`.
 
@@ -48,11 +48,15 @@ sudo make clean install
 
 ## Горячие клавиши
 
-Конфиг `~/.config/polybar/src/config.h`.
+Конфиг `~/.config/frankenwm/src/config.h`.
 
 - MOD4: Super/Windows
 - MOD1: Alt
 - XK_: воспринимайте как префикс, а дальше уже кнопка
+
+Присутствует утилита `sxhkd` для привязок клавиш без компиляции, конфиг ниже. По `super + F1` можно увидеть данные привязки.
+
+- `~/.config/frankenwm/sxhkdrc`
 
 ## Режимы и управление окнами
 
@@ -89,5 +93,6 @@ sudo make clean install
 `super+shift+Enter`    | Terminal urxvt.
 `super+r `             | Rofi - меню(лаунчер).
 `super+q `             | Закрыть окно.
+`super+shift+q`        | Закрыть frankenwm.
 
-Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://t.me/ctlos).
+Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://telegram.me/ctlos).

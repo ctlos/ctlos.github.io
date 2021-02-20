@@ -14,31 +14,25 @@ menus:
 1. TOC
 {:toc}
 
-> Текущий релиз 0.4.0
-
-Исходники: [bspwm ветка](https://github.com/ctlos/ctlosiso/tree/v0.4.0-bdsm).
-
-Автор: Alex Creio [@cretm](https://t.me/cretm).
-
 ![Bspwm](/wiki/images/wm/bspwm010.png)
 
 [Demo Video](https://www.youtube.com/watch?v=INOtQJ_yZE4).
 
 ## Скачать iso образ
 
-- Скачать [Ctlos Bspwm](/get)
+> Данный оконный менеджер доступен в `xfce iso`, метод online установки.
 
-Для установки левый верхний лаунчер на панели, правый клик - установщик в меню. По левому клику в rofi набрать `calamares` Enter.
+- [Скачать](/get)
 
 > Рекомендации после установки [next-install](/wiki/install/next-install).
 
 ## Оформление
 
 - Тема gtk: модификация Qogir.
-- Иконки: Qogir-dark, dui-ico.
+- Иконки: Qogir-dark.
 - Курсор: capitaine-cursors.
-- Шрифт: Clear Sans Medium,9 `ttf-clear-sans`.
-- Шрифт терминала: uw-ttyp0, Hack Nerd Font Mono,9 `ttf-nerd-fonts-hack-complete-git`.
+- Шрифт: Clear Sans Medium `ttf-clear-sans`.
+- Шрифт терминала: uw-ttyp0(`otb-uw_ttyp0`), Hack Nerd Font Mono,9 `nerd-fonts-hack`.
 
 ## Панели
 
@@ -46,7 +40,7 @@ menus:
 
 Элементы:
 
-- Запуск меню: левый клик - rofi, правый клик - jgmenu.
+- Запуск меню: левый клик - rofi.
 - Urxvt с сессией tmux. Сессия сохраняется, при закрытии и восстанавливается, при следующем нажатии.
 - Newsboat - rss читалка.
 - Монитор cpu и ram.
@@ -75,8 +69,8 @@ parcellite | менеджер буфера обмена. `ctrl+alt+h` откры
 Добавлен дефолтный конфиг `~/.config/sxhkd/sxhkdrc.example`, если хотите просто переименуйте исходный, но создайте копию.
 
 ```bash
-mv ~/.config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.bak
-mv ~/.config/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
+mv ~/.config/bspwm/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.bak
+mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
 ```
 
 ## Режимы и управление окнами
@@ -91,7 +85,7 @@ mv ~/.config/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
 
 Ключ | Описание
 --- | ---
-`super + F1` | Описание всех комбинаций на us.
+`super + F1` | Справка по горячим клавишам на us.
 `super + a` | Псевдо тайлинг.
 `super + s` | floating, плавающий режим.
 `super + d` | тайлинг.
@@ -147,7 +141,7 @@ mv ~/.config/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
 ~/.config/bspwm/bspwmrc | Основной конфиг.
 ~/.config/bspwm | Скрипты.
 ~/.config/bspwm/autostart.sh | Скрипт автостарта. Он вызывается в `~/.config/bspwm/bspwmrc`. Функция `run` нужна для рестарта bspwm, избегает дублей.
-~/.config/sxhkd/sxhkdrc | Конфиг горячих клавиш.
+~/.config/bspwm/sxhkd/sxhkdrc | Конфиг горячих клавиш.
 /etc/sddm.conf | Конфиг менеджера входа SDDM.
 ~/.config/bspwm/polybar | Скрипты и конфиг polybar.
 ~/.config/tint2/tray.tint2rc | Конфиг tint2 трей. В меню есть gui-конфигуратор (Настройки tint).
