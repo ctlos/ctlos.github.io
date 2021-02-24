@@ -1,0 +1,41 @@
+---
+layout: table_wrappers
+---
+
+<!DOCTYPE html>
+
+<html lang="{{ site.lang | default: 'en-US' }}">
+{% include head.html %}
+<body>
+  {% include svg.html %}
+  <div class="main-clear" id="top">
+    <div id="main-content-wrap" class="main-content-wrap">
+      <div id="main-content" class="main-content" role="main">
+      <h1>{{ page.title }}</h1>
+      {% if page.pre_text %}
+        {{ page.pre_text | markdownify }}
+      {% endif %}
+      {% include media.html %}
+      {% if site.heading_anchors != false %}
+        {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+
+      {% include edit.html %}
+
+      {% if site.disqus_shortname %}
+        {% include disqus.html %}
+      {% endif %}
+        <hr>
+        <footer>
+          <p class="text-small text-grey-dk-000 mb-0">
+            &copy; Copyright {{ site.time | date: "%Y" }}
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

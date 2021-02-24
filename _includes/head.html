@@ -3,7 +3,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {% if page.dir == "/rach/" %}
+  <title>{% if page.title != site.title %}{{ page.title }}{% endif -%}</title>
+  {% seo title=false %}
+  {% else %}
   {% seo %}
+  {% endif %}
 
   {% if page.image %}
   <meta property="vk:image" content="{{ page.image | absolute_url }}" />

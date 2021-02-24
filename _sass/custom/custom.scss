@@ -107,3 +107,17 @@ blockquote {
   display: none;
   cursor: pointer;
 }
+
+
+// clear layout
+.main-clear {
+  @include mq(md) {
+    position: relative;
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+
+  @include mq(lg) {
+    margin: 0 auto;
+  }
+}

@@ -21,7 +21,8 @@ menus:
 sudo nano /etc/pacman.conf
 
 [ctlos_repo]
-Server = https://github.com/ctlos/$repo/raw/dev/$arch
+Server = https://github.com/ctlos/$repo/raw/master/$arch
+...
 ```
 
 ### Установка
@@ -86,7 +87,7 @@ reflector --verbose -a1 -f10 -l70 -p https -p http --sort rate --save /etc/pacma
 nano /etc/pacman.conf
 
 [ctlos_repo]
-Server = https://github.com/ctlos/$repo/raw/dev/$arch
+Server = https://github.com/ctlos/$repo/raw/master/$arch
 Server = https://osdn.net/projects/ctlos/storage/$repo/$arch
 Server = https://cvc.keybase.pub/$repo
 ```

@@ -11,3 +11,41 @@
 {% if page.post_photo_path %}
 <img class="post-img" src="{{ page.post_photo_path }}" alt="{{ page.title }}">
 {% endif %}
+
+{% if page.plyr_video %}
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css">
+<style>
+  #player {
+    /*--plyr-color-main: #5a74ca;*/
+    /*--plyr-color-main: #F24784;*/
+    /*--plyr-color-main: #e94c4c;*/
+    /*margin-top: 1.5em;*/
+  }
+  {% if page.plyr_no_control %}
+  .plyr--video .plyr__controls { display: none }
+  {% else %}
+  .plyr--video.plyr--stopped .plyr__controls { display: none; }
+  /*.plyr--video.plyr--paused .plyr__controls { display: none; }*/
+  {% endif %}
+</style>
+
+<!-- <div class="plyr__video-embed" id="player">
+  <iframe
+  src="https://www.youtube.com/embed/{{ page.plyr_video }}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+  allowfullscreen
+  allowtransparency
+  allow="autoplay"
+  ></iframe>
+</div> -->
+<div id="player" style="--plyr-color-main: #5a74ca;" data-plyr-provider="youtube" data-plyr-embed-id="{{ page.plyr_video }}"></div>
+<script src="https://cdn.plyr.io/3.6.3/plyr.js" crossorigin="anonymous"></script>
+<script>
+  const player = new Plyr('#player');
+</script>
+
+  {% if page.plyr_link %}
+  <div class="text-center mt-3">
+    <a class="btn" href="https://www.youtube.com/watch?v={{ page.plyr_video }}">Смотреть на Youtube</a>
+  </div>
+  {% endif %}
+{% endif %}

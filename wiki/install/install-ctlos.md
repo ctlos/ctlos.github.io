@@ -5,7 +5,7 @@ menus:
   install:
     title: Установка
     weight: 1
-image: /assets/images/programming.svg
+image: /assets/img/programming.svg
 post_video: dOn_rHMZGxY
 ---
 

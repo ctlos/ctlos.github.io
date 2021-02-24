@@ -9,7 +9,7 @@ edit: false
 
 Только для x86-64(64-bit) архитектуры процессора.
 
-[![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)](/get)
+![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)
 
 > Актуальные ссылки для скачивания Ctlos всегда представлены на данной странице.
 
