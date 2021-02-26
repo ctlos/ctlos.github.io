@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wiki/admin/
+Disallow: /wiki/ctl/
+Disallow: /wiki/search/
+Disallow: /keybase.txt
+Sitemap: https://ctlos.github.io/sitemap.xml
+Host: ctlos.github.io
