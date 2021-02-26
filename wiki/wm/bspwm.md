@@ -66,11 +66,11 @@ parcellite | менеджер буфера обмена. `ctrl+alt+h` откры
 
 Очень многое переопределено, но никто не мешает использовать дефолт, [sxhkdrc](https://github.com/baskerville/bspwm/blob/master/examples/sxhkdrc).
 
-Добавлен дефолтный конфиг `~/.config/sxhkd/sxhkdrc.example`, если хотите просто переименуйте исходный, но создайте копию.
+Добавлен дефолтный конфиг `~/.config/bspwm/sxhkd/sxhkdrc.example`, если хотите просто переименуйте исходный, но создайте копию.
 
 ```bash
-mv ~/.config/bspwm/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.bak
-mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
+mv ~/.config/bspwm/sxhkd/sxhkdrc ~/.config/bspwm/sxhkd/sxhkdrc.bak
+mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 ```
 
 ### Режимы и управление окнами
