@@ -8,9 +8,11 @@ menus:
     weight: 2
 ---
 
-> Текущий релиз 0.1.0
+## Содержание
+{: .no_toc .text-delta }
 
-Исходники: [frankenwm v0.1.0](https://github.com/ctlos/ctlosiso/tree/v0.1.0-frankenwm).
+1. TOC
+{:toc}
 
 ![FrankenWm](/wiki/images/wm/frankenwm010.png)
 
@@ -58,7 +60,7 @@ sudo make clean install
 
 - `~/.config/frankenwm/sxhkdrc`
 
-## Режимы и управление окнами
+### Режимы и управление окнами
 
 Секция переключения режимов.
 
@@ -85,7 +87,7 @@ sudo make clean install
 
 Зажатая `Super(win)` и клавиши мыши манипулируют окнами: резмер, положение. В плавающем режиме.
 
-## Запуск утилит
+### Запуск утилит
 
 Ключ                   | Описание
 --- | ---
