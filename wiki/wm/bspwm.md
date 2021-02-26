@@ -73,7 +73,7 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.bak
 mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
 ```
 
-## Режимы и управление окнами
+### Режимы и управление окнами
 
 - Режим тайлинга tiled, плитка.
 - Режим pseudo_tiled, псевдо тайлинг. Нечто среднее между floating и tiled.
@@ -111,7 +111,7 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/sxhkd/sxhkdrc
 `super + alt + {1-9,0}` | Отправка окна на номер тега.
 `super + ctrl + p` | Скрыть/показать polybar.
 
-## Запуск утилит
+### Запуск утилит
 
 Ключ                   | Описание
 --- | ---
@@ -180,10 +180,8 @@ pavucontrol | управление звуком.
 file-roller | менеджер архивов.
 timeshift | резервное копирование.
 tmux | терминальный мультиплексор.
-rxrun.sh | Tmux с 3 табами. `~/.bin/rxrun.sh`.
+tmrun.sh | Tmux с 3 табами. `~/.bin/tmrun.sh`.
 
 Еще скрипты: `~/.bin`.
 
-Полный список пакетов: [packages.x86_64](https://github.com/ctlos/ctlosiso/blob/v0.4.0-bdsm/packages.x86_64).
-
-Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://t.me/ctlos).
+Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://telegram.me/ctlos).
