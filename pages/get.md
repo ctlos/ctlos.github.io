@@ -18,7 +18,7 @@ edit: false
 
 ## Зеркала для скачивания
 
-- [dev.ctlos.ru](https://dev.ctlos.ru/iso)
+- [cloud.ctlos.ru](https://cloud.ctlos.ru/iso)
 - [OSDN releases](https://osdn.net/projects/ctlos/releases/)
 - [Github releases](https://github.com/ctlos/ctlosiso/releases)
 

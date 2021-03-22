@@ -161,7 +161,7 @@ systemctl --user enable --now mpd
 ## Запуск потока
 
 ```bash
-mpv http://dev.ctlos.ru:8000
+mpv http://cloud.ctlos.ru:8000
 # или ip
 mpv http://134.122.88.241:8000
 ```
@@ -169,7 +169,7 @@ mpv http://134.122.88.241:8000
 ## Управление воспроизведением
 
 ```bash
-ncmpcpp -h dev.ctlos.ru
+ncmpcpp -h cloud.ctlos.ru
 # или ip и порт
 ncmpcpp -h 134.122.88.241 -p 6600
 ```
