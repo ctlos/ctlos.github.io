@@ -52,11 +52,11 @@ mount /dev/sdb1 /mnt/dump
 ```
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /mnt/dump/@/* /mnt/@_root/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /mnt/dump/@/* /mnt/@_root/
 ```
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /mnt/dump/@home/* /mnt/@_home/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /mnt/dump/@home/* /mnt/@_home/
 ```
 
 И отмонтируем корень ФС.
@@ -105,12 +105,14 @@ swapon /dev/sda3
 Начиная с ядра 5.0 можно создать swap-файл, swap-файл должен располагаться целиком на одном устройстве, создаваться с отключенным COW и сжатием.
 
 ```bash
-touch /swap             # создаем пустой файл /swap
-chmod go-r /swap        # swap должен иметь права 600
-chattr +C /swap         # отключаем COW, сжатие тоже отключается
-fallocate /swap -l4g    # файл 4Gb
-mkswap /swap
-swapon /swap
+truncate -s 0 /swapfile
+chattr +C /swapfile
+btrfs property set /swapfile compression none
+fallocate /swapfile -l4g
+chmod 600 /swapfile
+mkswap /swapfile
+lsattr /swapfile
+swapon /swapfile
 ```
 
 Теперь нужно проинициализировать систему. Редактируем FSTAB, или запускаем genfstab.

@@ -46,17 +46,17 @@ mount /dev/sdb1 /dump
 Копируем `/` в `/dump` с исключением, но с созданием нужных директорий.
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /* /dump/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/*","/home/*"} /* /dump/
 ```
 
 Скопировать систему полностью.
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/home/lost+found","/boot/lost+found"} /* /dump/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/home/lost+found","/boot/lost+found"} /* /dump/
 ```
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/lost+found","/home/lost+found","/home/*/.thumbnails/*","/home/*/.cache/*","/home/*/.local","/home/*/.gvfs/*","/home/*/files/*","/home/*/.var","/home/*/.npm","/home/*/.node-gyp","/home/*/.electron"} /* /run/media/st/dump/myarch/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/lost+found","/home/lost+found","/home/*/.thumbnails/*","/home/*/.cache/*","/home/*/.local","/home/*/.gvfs/*","/home/*/files/*","/home/*/.var","/home/*/.npm","/home/*/.node-gyp","/home/*/.electron"} /* /run/media/st/dump/myarch/
 ```
 
 Стоит заметить и исключить из `/home`, как пример ниже.
@@ -66,7 +66,7 @@ rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*",
 ```
 
 ```bash
-rsync -avAXHP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/lost+found","/home/lost+found","/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.local/share/Trash/*","/home/*/.gvfs/*"} /* /dump/
+rsync -cauvP --delete --delete-excluded --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/var/lib/pacman/sync/*","/var/cache/*","/var/tmp/*","/boot/lost+found","/home/lost+found","/home/*/.thumbnails/*","/home/*/.cache/mozilla/*","/home/*/.local/share/Trash/*","/home/*/.gvfs/*"} /* /dump/
 ```
 
 Исключите каталоги в которых смонтированы диски/разделы, если нужно.
