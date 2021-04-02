@@ -70,7 +70,7 @@ color_scheme: dark
 google_analytics: UA-90439782-2
 ya_metrika: 47541358
 google_verification: 6GXUozcEfaPdh8Qcr-0qBY2AV8MkL-QoQ66FpbytieM
-yandex_verification: 3051c5823192d0b9
+yandex_verification: bffec9acda88be77
 
 plugins:
   - jekyll-menus
