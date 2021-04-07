@@ -226,5 +226,5 @@ yay -S onlyoffice-bin --noconfirm
 
 ```bash
 sudo pacman -S cups cups-filters cups-pdf cups-pk-helper ghostscript gsfonts foomatic-db foomatic-db-engine foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds system-config-printer hplip splix
-sudo systemctl enable org.cups.cupsd.service
+sudo systemctl enable --now cups.service
 ```
