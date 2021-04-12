@@ -90,10 +90,10 @@
 
 .search-results-wrap {
   position: absolute;
-  left: 0;
+  // left: 0;
   display: none;
-  width: 100%;
-  max-height: calc(100% - #{$sp-10});
+  width: 97%;
+  max-height: calc(100vh - 200%) !important;
   overflow-y: auto;
   background-color: $search-background-color;
   border-bottom-right-radius: $border-radius;
@@ -107,7 +107,6 @@
   @include mq(md) {
     top: 100%;
     width: $search-results-width;
-    max-height: calc(100vh - 200%) !important;
   }
 }
 
