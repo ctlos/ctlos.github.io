@@ -64,7 +64,7 @@ yay -S nvidia nvidia-settings nvidia-utils opencl-nvidia opencl-headers lib32-nv
 Драйвер nvidia может иметь префикс nvidia-390xx, конкретно для вашей карты, уточняйте на сайте производителя и в [Арч-вики](https://wiki.archlinux.org/index.php/NVIDIA).
 
 ```bash
-yay -S lib32-opencl-nvidia-390xx lib32-nvidia-390xx-utils opencl-nvidia-390xx nvidia-390xx-utils nvidia-390xx-settings nvidia-390xx
+yay -S lib32-opencl-nvidia-390xx lib32-nvidia-390xx-utils opencl-nvidia-390xx nvidia-390xx-utils nvidia-390xx-settings nvidia-390xx-dkms
 ```
 
 Создание xorg файла `/etc/X11/xorg.conf`.
