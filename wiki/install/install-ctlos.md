@@ -6,7 +6,7 @@ menus:
     title: Установка
     weight: 1
 image: /assets/img/programming.svg
-post_video: dOn_rHMZGxY
+post_video: teJ1Gm6ME5c
 ---
 
 ## Содержание
