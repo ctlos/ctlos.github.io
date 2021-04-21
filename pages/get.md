@@ -18,9 +18,10 @@ edit: false
 
 ## Зеркала для скачивания
 
-- [cloud.ctlos.ru](https://cloud.ctlos.ru/iso)
+- [ctlos.duckdns.org](https://ctlos.duckdns.org/iso)
 - [OSDN releases](https://osdn.net/projects/ctlos/releases/)
 - [Github releases](https://github.com/ctlos/ctlosiso/releases)
+- [Ipfs](https://ctlos.fission.app/)
 
 > [Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).
 {:.warning}

@@ -94,14 +94,18 @@ Server = https://cvc.keybase.pub/$repo
 
 ## Ctlos aur
 
-Можете воспользоваться [Ctlos aur](https://cloud.ctlos.ru/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
+Можете воспользоваться [Ctlos aur](https://ctlos.duckdns.org/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
 
 ```bash
 nano /etc/pacman.conf
 
 [ctlos-aur]
 SigLevel = Optional TrustAll
-Server = https://cloud.ctlos.ru/ctlos-aur
+Server = https://ctlos.duckdns.org/ctlos-aur
 ```
+
+### Зеркала
+
+- https://ctlos.fission.app/
 
 > Если Вы заметите какие-либо проблемы в репозиториях, сообщите в [Telegram Chat](https://telegram.me/ctlos).
