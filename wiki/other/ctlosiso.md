@@ -22,7 +22,6 @@ post_photo_path: /wiki/images/other/ctlosiso.png
 
 - [Github README](https://github.com/ctlos/ctlosiso/blob/master/README.md) - быстрый способ
 
-## Глубокое вмешательство
 
 ### Подготовка
 
@@ -32,7 +31,19 @@ post_photo_path: /wiki/images/other/ctlosiso.png
 yay -S git archiso mkinitcpio-archiso --noconfirm --needed
 ```
 
-Создание директории и клонирование репозитория.
+> Для сборки необходимо подключить локально [ctlos_repo](https://ctlos.github.io/wiki/install/ctlos-repo/), или изменить под себя pacman.conf и пакеты.
+
+Задействован [chaotic](https://aur.chaotic.cx/) репозиторий, проще всего его установить, через yay из aur.
+
+```bash
+yay -S chaotic-keyring chaotic-mirrorlist --noconfirm --needed
+```
+
+### Локальный репозиторий
+
+> Нужен в том случае, если вы хотите, что-то собрать и добавить из aur.
+
+Создание директории и клонирование репозитория ctlos. Еще немного о [лакальном репо](https://wiki.archlinux.org/index.php/Archiso#Custom_local_repository).
 
 ```bash
 mkdir ~/ctlos
@@ -70,7 +81,7 @@ makepkg -s
 
 ```bash
 cd ~/ctlos/ctlos_repo/x86_64
-repo-add ctlos_repo.db.tar.gz *.tar.xz
+repo-add ctlos_repo.db.tar.zst *.tar.zst
 ```
 
 Или.
@@ -82,9 +93,9 @@ repo-add ctlos_repo.db.tar.gz *.tar.xz
 После добавления новых пакетов из aur необходимо переинициализировать репозиторий.(Удалить файлы баз данных), или запустить скрипт `update.sh` он сам все пересоздаст.
 
 ```bash
-repo-add ctlos_repo.db.tar.gz *.tar.xz
+repo-add ctlos_repo.db.tar.zst *.tar.xz
 
-repo-add ctlos_repo.db.tar.gz *.pkg.tar.zst
+repo-add ctlos_repo.db.tar.zst *.pkg.tar.zst
 ```
 
 Или.
@@ -102,7 +113,7 @@ cd ~/ctlos
 git clone --depth=1 https://github.com/ctlos/ctlosiso
 ```
 
-Добавляем пользовательский репозиторий для aur пакетов. В `/ctlos/ctlosiso/pacman.conf`.
+> Добавляем пользовательский репозиторий для aur пакетов. В `/ctlos/ctlosiso/pacman.conf`.
 
 ```bash
 [ctlos_repo]
@@ -129,7 +140,7 @@ chmod +x {autobuild.sh,chroot.sh,mkarchiso}
 
 - Пакеты: packages.x86_64
 
-Скрипту autobuild.sh обязательно нужно передать аргумент, любой. Я обычно отправляю `xfce_1.7.0` de/wm и версию.
+Скрипту `autobuild.sh` обязательно нужно передать аргумент, любой. Я обычно отправляю `xfce_1.7.0` de/wm и версию.
 
 ```bash
 sudo ./autobuild.sh xfce_1.7.0
@@ -148,7 +159,7 @@ sudo rm -rf {out,work}
 Или отредактировать.
 
 ```bash
-nano /bin/pacstrap
+sudo nano /bin/pacstrap
 ```
 
 Изменить строку, для пропуска установленных пакетов.
