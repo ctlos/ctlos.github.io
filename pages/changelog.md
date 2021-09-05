@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Лог Изменений
-description: История измененя Ctlos, релизы
+description: История изменения Ctlos, релизы
 permalink: /wiki/changelog/
 comments: false
 edit: false
