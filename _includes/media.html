@@ -2,10 +2,16 @@
 <div class="embed-responsive embed-responsive-16by9">
   <iframe src="https://www.youtube.com/embed/{{ page.post_video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<div class="text-center mt-3">
+  <a class="btn" href="https://www.youtube.com/watch?v={{ page.post_video }}">Смотреть на Youtube</a>
+</div>
 {% endif %}
 {% if page.post_playlist %}
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list={{ page.post_playlist }}" modestbranding="1" frameborder="0" theme="dark" allowfullscreen></iframe>
+</div>
+<div class="text-center mt-3">
+  <a class="btn" href="https://www.youtube.com/watch?list={{ page.post_playlist }}">Смотреть на Youtube</a>
 </div>
 {% endif %}
 {% if page.post_photo_path %}

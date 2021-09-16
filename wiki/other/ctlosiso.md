@@ -8,8 +8,6 @@ menus:
 post_photo_path: /wiki/images/other/ctlosiso.png
 ---
 
-[YouTube link](https://www.youtube.com/watch?list=PLwdYMSK64DT6CCheHMbaqlOzpqfk2FTvT&v=XNpAXthDbrI) Старая версия, но многое объясняет.
-
 Содержание
 {: .text-delta }
 
@@ -20,7 +18,7 @@ post_photo_path: /wiki/images/other/ctlosiso.png
 
 [YouTube link](https://www.youtube.com/watch?list=PLwdYMSK64DT6CCheHMbaqlOzpqfk2FTvT&v=XNpAXthDbrI) Старое видео, но многое объясняет.
 
-- [Github README](https://github.com/ctlos/ctlosiso/blob/master/README.md) - быстрый способ
+* [Github README](https://github.com/ctlos/ctlosiso/blob/master/README.md) — быстрый способ.
 
 
 ### Подготовка
