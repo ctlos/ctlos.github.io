@@ -16,10 +16,19 @@ edit: true
 {: .no_toc }
 
 Содержание
-{: .text-delta }
+{: .no_toc .text-delta }
 
 1. TOC
 {:toc}
+
+<details open markdown="block">
+  <summary>
+    Содержание ▼
+  </summary>
+  {: .no_toc .text-delta }
+1. TOC
+{:toc}
+</details>
 
 [Github releases](https://github.com/ctlos/ctlosiso/releases){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
 

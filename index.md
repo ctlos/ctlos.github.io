@@ -4,6 +4,7 @@ title: Ctlos Linux — iso образ, основанный на Arch Linux
 description: Официальный сайт
 nav_exclude: true
 edit: false
+comments: false
 ---
 
 Созданный с помощью [archiso](https://gitlab.archlinux.org/archlinux/archiso) скриптов.
