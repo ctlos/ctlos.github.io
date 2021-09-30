@@ -17,7 +17,7 @@ Screencast, работа с видео/аудио. Скрипт в `~/.bin/cast`
 
 ## Параметры записи
 
-- Pavucontrol, 46% микрофон.
+- Pavucontrol, 32% микрофон.
 - Запись simplescreenrecorder: MKV, H.264, rate 20, superfast, vorbis 128.
 - Audacity: удаляем шумы(дважды), улучшаем звук.
 - ffmpeg: заменяем аудио дорожку.
@@ -35,7 +35,7 @@ Screencast, работа с видео/аудио. Скрипт в `~/.bin/cast`
 
 ### Изменяем голос
 
-- Двойной клик на дорожке(выделить всю), Эффекты-Смена высоты тона. -15, ок.
+- Двойной клик на дорожке(выделить всю), Эффекты-Смена высоты тона. -5, ок.
 - Файл-экспорт-как wav.
 
 ## Замена аудио ffmpeg
@@ -45,14 +45,6 @@ ffmpeg -i input.mp4 -i good.wav -map 0:0 -map 1:0 -c copy output.mp4
 
 ffmpeg -i input.mp4 -i input.wav -c:a aac -vcodec copy -map 0:0 -map 1:0 output.mp4
 ```
-
-## AvidemuxQT
-
-- Открыть видео.
-- Аудио-Выбрать дорожку.
-- Отключаем 1 дорожку по умолчанию.
-- На 2 дорожку добавляем отредактированый в Audacity wav файл.
-- Если нужно используем сдвиг.
 
 ## Ffmpeg
 
@@ -76,10 +68,10 @@ ffmpeg -ss 00:00:00 -i test.mkv -c copy -t 00:00:06 test2.mkv
 ffmpeg -ss 00:01:00 -i video.mp4 -to 00:02:00 -c copy -copyts out.mp4
 ```
 
-Первые 4 сек.
+Удалить первые 1.30 секунды.
 
 ```bash
-ffmpeg -i video.mp4 -ss 00:00:04 -c copy out.mp4
+ffmpeg -ss 00:00:01.30 -i video.mp4 -c copy out.mp4
 ```
 
 Замедление, множитель больше 1.
@@ -138,9 +130,7 @@ ffmpeg -i 1.avi -i 2.avi -i 3.avi -i 4.avi -filter_complex "nullsrc=size=640x480
 
 ### Наложение аудио
 
-Проще заменить дорожку, или наложить в `avidemux`, если нужно применяем сдвиг в милесекундах (-2000), 2 секунды.
-
-Опция `shortest` — если аудио и видео на входе имеют разную длительность по времени, то результат будет иметь длительность самого короткого компонента.
+Опция `shortest` — если аудио и видео на входе имеют разную длительность по времени, то результат будет иметь длительность самого длинного компонента.
 
 ```bash
 ffmpeg -i видео.mp4 -i аудио.wav -c:v copy -c:a copy -shortest результат.mkv
@@ -157,7 +147,7 @@ ffmpeg -i video4.mp4 -i wave.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=
 Зацикливаем 2 аудио дорожку и понижаем звук, т.к. применили `-stream_loop`, то и `-shortest` нужен.
 
 ```bash
-ffmpeg -i video4.mp4 -stream_loop -1 -i bla.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=0.03[a2];[a1][a2]amerge=inputs=2" -c:v copy -c:a libmp3lame -shortest out_mp3.mp4
+ffmpeg -i video4.mp4 -stream_loop -1 -i bla.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=0.04[a2];[a1][a2]amerge=inputs=2" -c:v copy -c:a libmp3lame -shortest out_mp3.mp4
 ```
 
 ## Конвертировать видео в gif
