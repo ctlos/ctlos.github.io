@@ -5,7 +5,7 @@ description: Gnu/Linux дистрибутив на основе Arch, разра
 pre_text: Совершенно Секретно
 permalink: /rach/
 image: /assets/img/programming.svg
-comments: true
+comments: false
 sitemap: true
 search_exclude: true
 edit: false
