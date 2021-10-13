@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/cvc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ctlos.github.io
+  * I am cvc (https://keybase.io/cvc) on keybase.
+  * I have a public key ASDhXs0XpGByV1OyL4KxK82XNFtfCz0TzNsKGpU2fx0qcAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e15ecd17a460725753b22f82b12bcd97345b5f0b3d13ccdb0a1a95367f1d2a700a",
+      "host": "keybase.io",
+      "kid": "0120e15ecd17a460725753b22f82b12bcd97345b5f0b3d13ccdb0a1a95367f1d2a700a",
+      "uid": "14e51a4c8ec0b3b31d10c8a7371f7919",
+      "username": "cvc"
+    },
+    "merkle_root": {
+      "ctime": 1533115267,
+      "hash": "1d3440c89d3cbf4daf570930a3e98153a2d5f1565c74292acd7246aed0abaa9ffb72ef805e012b8f21156e3aa8cee471fe50ec42bff083b3b8d27cc682aa4bd2",
+      "hash_meta": "603bbbfc2f99b1b5061c34d3915dadaae58399b2fa6a0a03f61112dea3710450",
+      "seqno": 3365995
+    },
+    "service": {
+      "entropy": "plIclBQt6u89qMgRDndWfZXm",
+      "hostname": "ctlos.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.4.0"
+  },
+  "ctime": 1533115299,
+  "expire_in": 504576000,
+  "prev": "4308ad1f5df13011bb5db5a41bbca69ab5206b44eb8b8809e5ec3b978501a1d2",
+  "seqno": 129,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg4V7NF6RgcldTsi+CsSvNlzRbXws9E8zbChqVNn8dKnAKp3BheWxvYWTES5cCzIHEIEMIrR9d8TARu121pBu8ppq1IGtE64uICeXsO5eFAaHSxCALBppoqLazYqcmA5LBnhspvxdiAfcGf95rkCquKowpDgIBwqNzaWfEQMznOYm3UlpJ9k5raDBVbNhShXVO8OiuVecnQPMemDBs6xMxOnZrhDuO0YxQW0i1+WZLkn6q27gws0t04HmyHQSoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCCdItMTu4ZAe5hblVE8Md4j4MRlPY7Yax8DLbC9c10/aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cvc
+
+==================================================================
