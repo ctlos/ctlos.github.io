@@ -1,0 +1,71 @@
+/* Jost - regular */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-Regular.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Jost - 500 */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-Medium.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Jost - 600 */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-SemiBold.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-SemiBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Jost - italic */
+@font-face {
+  font-family: "Jost";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-Italic.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-Italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Jost - 500italic */
+@font-face {
+  font-family: "Jost";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-MediumItalic.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-MediumItalic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Jost - 600italic */
+@font-face {
+  font-family: "Jost";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Jost"),
+    url("fonts/vendor/Jost/Jost-SemiBoldItalic.woff2") format("woff2"),
+    url("fonts/vendor/Jost/Jost-SemiBoldItalic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

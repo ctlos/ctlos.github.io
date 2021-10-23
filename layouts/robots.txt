@@ -1,0 +1,7 @@
+User-agent: *
+{{ if eq (hugo.Environment) "production" -}}
+Disallow: /keybase.txt
+{{ else -}}
+Disallow: /
+{{ end }}
+Sitemap: {{ "sitemap.xml" | absURL -}}

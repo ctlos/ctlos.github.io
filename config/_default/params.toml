@@ -1,0 +1,83 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Ctlos Linux"
+titleSeparator = "|"
+titleAddition = "Ctlos Linux — iso образ, основанный на Arch Linux"
+description = "Созданный с помощью archiso скриптов."
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["post.png"]
+ogLocale = "ru_RU"
+domainTLD = "ctlos.github.io"
+titleHome = "Ctlos Linux"
+
+## Twitter Cards
+twitterSite = "@ctloslin"
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "Ctlos"
+schemaAuthor = "Alex Creio"
+schemaAuthorGitHub = "https://github.com/creio"
+schemaLocale = "ru-RU"
+schemaLogo = "logo.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "post.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = "https://twitter.com/ctloslin"
+schemaGitHub = "https://github.com/ctlos"
+schemaSection = "changelog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Footer
+footer = "Gen: <a href=\"https://gohugo.io\">Hugo</a> | Fork: <a href=\"https://getdoks.org\">Doks</a>"
+
+# Feed
+copyRight = "Copyright (c) Ctlos Linux"
+
+# Alert
+alert = true
+alertDismissable = true
+# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
+alertText = "Курс: Администратор Linux <a target=\"_blank\" class=\"alert-link stretched-link\" href=\"https://go.acstat.com/dd8dd6e6d0d585c0\">Подробнее</a>"
+
+# Edit Page
+# repoHost [Github | Gitea | GitLab]
+repoHost = "GitHub"
+docsRepo = "https://github.com/ctlos/ctlos.github.io"
+docsRepoBranch = "master"
+editPage = true
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = true
+  highLight = true
+  kaTex = false
+  collapsibleSidebar = true
+  multilingualMode = true
+  wikiVersioning = false

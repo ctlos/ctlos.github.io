@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="row justify-content-center">
+  <div class="col-md-12">
+    <article>
+      <h1 class="">{{ .Title }}</h1>
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <div class="">{{ .Content }}</div>
+			<div class="card-list">
+        {{ $paginator := .Paginate (.Data.Pages) -}}
+        {{ range $paginator.Pages.ByParam "weight" -}}
+          <div class="card my-3">
+            <div class="card-body">
+              <a class="stretched-link" href="{{ .Permalink }}">{{ .Params.title | title }} &rarr;</a>
+            </div>
+          </div>
+        {{ end }}
+        {{ $.Scratch.Set "paginator" true }}
+        {{ template "_internal/pagination.html" . }}
+			</div>
+    </article>
+  </div>
+</div>
+{{ end }}

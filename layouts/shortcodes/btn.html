@@ -1,0 +1,4 @@
+{{ $link := .Get 0 }}
+<div class="pb-4">
+  <a class="btn{{ if .Get 2 }} {{ .Get 2 }}{{ else }} btn-primary{{ end }}" href="{{ .Get 0 }}" {{ if strings.HasPrefix $link "http" }} target="_blank" rel="noopener"{{ end }} role="button">{{ .Get 1 }}</a>
+</div>

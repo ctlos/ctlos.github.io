@@ -1,0 +1,33 @@
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
+
+{{ if $image -}}
+  {{ $lqip := $image.Resize $.Site.Params.lqipWidth -}}
+
+  {{ $imgSrc := "" -}}
+  {{ $imgSrcSet := slice -}}
+
+  {{ $widths := $.Site.Params.landscapePhotoWidths -}}
+  {{ if gt $image.Height $image.Width -}}
+    {{ $widths = $.Site.Params.portraitPhotoWidths -}}
+  {{ end -}}
+
+  {{ range $widths -}}
+    {{ $srcUrl := (printf "%dx" . | $image.Resize).Permalink -}}
+    {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+    {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) -}}
+  {{ end -}}
+  {{ $imgSrcSet = (delimit $imgSrcSet ",") -}}
+
+  <figure class="mb-4{{ with .Get "class" }} {{.}}{{ end }}">
+    {{ if eq .Site.Params.options.lazySizes true -}}
+      <img class="img-fluid{{ if not (strings.HasSuffix $image "gif") }} lazyload blur-up{{ end }}{{ with .Get "class" }} {{.}}{{ end }}" data-sizes="auto" src="{{ if strings.HasSuffix $image "gif" }}{{ $image }}{{ else }}{{ $imgSrcSet }}{{ end }}" data-srcset="{{ $imgSrcSet }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+    {{ else -}}
+      <img class="img-fluid{{ with .Get "class" }} {{.}}{{ end }}" sizes="100vw" srcset="{{ $imgSrcSet }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+    {{ end -}}
+    <noscript><img class="img-fluid{{ with .Get "class" }} {{.}}{{ end }}" sizes="100vw" srcset="{{ $imgSrcSet }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}></noscript>
+    {{ with .Get "caption" }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end }}
+  </figure>
+{{ else -}}
+  <img class="img-fluid mb-4 lazyload blur-up{{ with .Get "class" }} {{.}}{{ end }}" data-sizes="auto" src="{{ with .Get "src" }}{{.}}{{ end }}" data-srcset="{{ with .Get "src" }}{{.}}{{ end }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }} {{ with .Get "width" }}width="{{.}}"{{ end }} {{ with .Get "height" }}height="{{.}}"{{ end }}>
+  {{ with .Get "caption" }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end }}
+{{ end -}}
