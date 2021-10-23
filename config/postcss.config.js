@@ -23,6 +23,7 @@ module.exports = {
         ...whitelister([
           './assets/scss/components/_buttons.scss',
           './assets/scss/components/_code.scss',
+          './assets/scss/components/_comments.scss',
           './assets/scss/components/_diagrams.scss',
           './assets/scss/components/_syntax.scss',
           './assets/scss/components/_search.scss',
