@@ -4,7 +4,7 @@
 title = "Ctlos Linux"
 titleSeparator = "|"
 titleAddition = "Ctlos Linux — iso образ, основанный на Arch Linux"
-description = "Созданный с помощью archiso скриптов."
+description = "Собран с помощью archiso скриптов."
 
 ## Documentation
 # docsVersion = "0.3"
