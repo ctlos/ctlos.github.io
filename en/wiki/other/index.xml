@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Прочее on</title><link>https://ctlos.github.io/en/wiki/other/</link><description>Recent content in Прочее on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/en/wiki/other/index.xml" rel="self" type="application/rss+xml"/><item><title>Ctlos iso</title><link>https://ctlos.github.io/en/wiki/other/ctlosiso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/ctlosiso/</guid><description>Создание iso образа # YouTube link Старое видео, но многое объясняет.
+Github README — быстрый способ. Подготовка # Установить пакеты для сборки.
+yay -S git archiso mkinitcpio-archiso --noconfirm --needed Для сборки необходимо подключить локально ctlos_repo, или изменить под себя pacman.conf и пакеты.
+Задействован chaotic репозиторий, проще всего его установить, через yay из aur.
+yay -S chaotic-keyring chaotic-mirrorlist --noconfirm --needed Локальный репозиторий # Нужен в том случае, если вы хотите, что-то собрать и добавить из aur.</description></item><item><title>Установка Grub UEFI</title><link>https://ctlos.github.io/en/wiki/other/grub-uefi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/grub-uefi/</guid><description>Подготовка # Информация о диске.
+parted /dev/sda print Создать таблицу GPT. Создать boot раздел 512M, выбрать тип EFI.
+cfdisk parted /dev/sda print Форматируем.
+mkfs.fat -F32 /dev/sda1 Монтируем корень и другие, если надо.
+mount /dev/sda2 /mnt Создаем efi дерикторию и др., если надо.
+mkdir -p /mnt/boot/efi Монтируем boot EFI.
+mount /dev/sda1 /mnt/boot/efi Установка # Выполняем chroot.
+arch-chroot /mnt Установим Grub.
+pacman -S grub efibootmgr dosfstools os-prober Установим grub в /boot/efi.</description></item><item><title>Использование GnuPG</title><link>https://ctlos.github.io/en/wiki/other/gnupg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/gnupg/</guid><description>Цифровые подписи # wiki.archlinux.org.
+Генерация, создание пары ключей.
+gpg --full-gen-key Просмотр списка ключей.
+gpg --list-keys gpg --list-secret-keys gpg --list-public-keys Id ключей.
+gpg --list-public-keys --keyid-format LONG gpg --list-secret-keys --keyid-format LONG Удалить ключ.
+gpg --delete-secret-keys 98F76D97B786E6A3 gpg --delete-keys 98F76D97B786E6A3 Редактировать ключ.
+gpg --expert --edit-key ctlos@protonmail.com Экспорт открытого ключа в текстовом виде.
+gpg --armor --output pubkey.txt --export 98F76D97B786E6A3 Экспорт закрытого ключа в текстовом виде.
+gpg --armor --output privkey.</description></item><item><title>Настройка git и использование</title><link>https://ctlos.github.io/en/wiki/other/git-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/git-start/</guid><description>Настройка git # Конфигурация.
+git config --global user.name &amp;quot;ctlos&amp;quot; git config --global user.email &amp;quot;ctlos@protonmail.com&amp;quot; Генерация ssh-ключей.
+ssh-keygen -t rsa -b 4096 -C &amp;quot;ctlos@protonmail.com&amp;quot; Забрать ключ в ~/.ssh имя id_rsa.pub.
+Использование # Инициализация.
+git init Статус.
+git status Игнорирование файлов и каталогов .gitignore.
+Добавление изменений.
+git add . git commit -m &amp;quot;test&amp;quot; Работа с github # Создание репозитория на github.com.
+git remote add origin https://github.com/ctlos/ctlosiso git remote add origin git@github.</description></item><item><title>Screencast</title><link>https://ctlos.github.io/en/wiki/other/screencast/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/screencast/</guid><description>Screencast, работа с видео/аудио. Скрипт в ~/.bin/cast.
+Параметры записи # Pavucontrol, 32% микрофон. Запись simplescreenrecorder: MKV, H.264, rate 20, superfast, vorbis 128. Audacity: удаляем шумы(дважды), улучшаем звук. ffmpeg: заменяем аудио дорожку. ffmpeg: перекодируем в mp4, 1080p, 30 кадров, bit rate 128k, если нужно ускоряем на 20%. ffmpeg: накладываем 2 аудио дорожку, зацикливаем и понижаем звук. Обрезаем, если нужно. Audacity # Выделить фрагмент без звука, Эффекты-Noise Reduction-создать модель шума.</description></item><item><title>Заметки</title><link>https://ctlos.github.io/en/wiki/other/notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/en/wiki/other/notes/</guid><description>Загрузка и запись iso # https://github.com/ctlos/ctlosiso/releases
+Прописать полную ссылку к файлу.
+Wget # sudo wget -O - https://github.com/ctlos/ctlosiso/releases/download/v1.0.0/*.iso &amp;gt; /dev/sdX &amp;amp;&amp;amp; sync Curl # sudo curl -L https://github.com/ctlos/ctlosiso/releases/download/v1.0.0/*.iso &amp;gt; /dev/sdX &amp;amp;&amp;amp; sync Curl и dd # sudo curl -L https://github.com/ctlos/ctlosiso/releases/download/v1.0.0/*.iso | dd bs=4M of=/dev/sdX status=progress &amp;amp;&amp;amp; sync Установка без носителя # wiki.archlinux.org/index.php/Install_from_existing_Linux. Video. Настройка sudo # EDITOR=nano visudo Дать пользователю привилегии суперпользователя, когда он вводит sudo.</description></item></channel></rss>
