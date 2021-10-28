@@ -1,11 +1,21 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12">
-    <article>
-      <h1 class="">{{ .Title }}</h1>
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <div class="">{{ .Content }}</div>
-			<div class="card-list">
+<div class="row flex-xl-nowrap">
+  <div class="col-lg-5 col-xl-4 docs-sidebar d-none d-lg-block">
+    <nav class="docs-links" aria-label="Main navigation">
+      {{ partial "sidebar/wiki-menu.html" . }}
+    </nav>
+  </div>
+  <article class="docs-content col-lg-11 col-xl-12 mx-xl-auto">
+    <h1 class="">{{ .Title }}</h1>
+    <p class="lead">{{ .Params.lead | safeHTML }}</p>
+    <div class="">{{ .Content }}</div>
+    {{ if .Site.Params.editPage -}}
+      {{ if ne .Params.edit false -}}
+        {{ partial "main/edit-page.html" . }}
+      {{ end -}}
+    {{ end -}}
+		<div class="card-list">
+      {{ if ne .RelPermalink "/wiki/" }}
         {{ $paginator := .Paginate (.Data.Pages) -}}
         {{ range $paginator.Pages.ByParam "weight" -}}
           <div class="card my-3">
@@ -16,8 +26,8 @@
         {{ end }}
         {{ $.Scratch.Set "paginator" true }}
         {{ template "_internal/pagination.html" . }}
-			</div>
-    </article>
-  </div>
+      {{ end }}
+		</div>
+  </article>
 </div>
 {{ end }}
