@@ -154,9 +154,9 @@ torify ssh user@blabla -p 22
 curl --max-time 10 -w '\n' http://ident.me
 ```
 
-В firefox используйте расширение FoxyProxy.
+В firefox используйте расширение FoxyProxy, или в параметрах сети укажите только SOCKS5.
 
-> В настройках расширения, Добавить новый SOCKS4, ip: 127.0.0.1, port: 9050
+> В настройках расширения, Добавить новый SOCKS5, ip: 127.0.0.1, port: 9050
 
 Chromium запустите с флагом.
 

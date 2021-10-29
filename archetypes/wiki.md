@@ -4,10 +4,11 @@ description: ""
 lead: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
-images: []
+images: ["{{ .Name | urlize }}.png"]
+post_video:
 menu: 
   wiki:
-    title: ""
+    title: "{{ replace .Name "-" " " | title }}"
     parent: ""
 weight: 999
 draft: true
@@ -16,4 +17,4 @@ comments: true
 edit: true
 ---
 
-{{< img src="{{ .Name | urlize }}.jpg" alt="{{ replace .Name "-" " " | title }}" caption="{{ replace .Name "-" " " | title }}" >}}
+{{< img src="{{ .Name | urlize }}.png" alt="{{ replace .Name "-" " " | title }}" caption="{{ replace .Name "-" " " | title }}" >}}

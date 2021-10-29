@@ -20,7 +20,7 @@
 
   <figure class="mb-4{{ with .Get "class" }} {{.}}{{ end }}">
     {{ if eq .Site.Params.options.lazySizes true -}}
-      <img class="img-fluid{{ if not (strings.HasSuffix $image "gif") }} lazyload blur-up{{ end }}{{ with .Get "class" }} {{.}}{{ end }}" data-sizes="auto" src="{{ if strings.HasSuffix $image "gif" }}{{ $image }}{{ else }}{{ $imgSrcSet }}{{ end }}" data-srcset="{{ $imgSrcSet }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+      <img class="img-fluid{{ if not (strings.HasSuffix $image "gif") }} lazyload blur-up{{ end }}{{ with .Get "class" }} {{.}}{{ end }}" data-sizes="auto" src="{{ if strings.HasSuffix $image "gif" }}{{ $image }}{{ else }}{{ $lqip.RelPermalink }}{{ end }}" data-srcset="{{ $imgSrcSet }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
     {{ else -}}
       <img class="img-fluid{{ with .Get "class" }} {{.}}{{ end }}" sizes="100vw" srcset="{{ $imgSrcSet }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
     {{ end -}}
