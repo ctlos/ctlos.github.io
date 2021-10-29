@@ -5,4 +5,7 @@
 Запуск меню: левый клик - rofi. Urxvt с сессией tmux.</description></item><item><title>Ctlos Linux FrankenWm</title><link>https://ctlos.github.io/wiki/wm/frankenwm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/wm/frankenwm/</guid><description>Скачать iso образ # Данный оконный менеджер доступен в xfce iso, метод online установки.
 Скачать Рекомендации после установки next-install.
 Конфигурационные файлы # Путь Описание ~/.config/frankenwm/src/config.h Основной конфиг. ~/.config/frankenwm/autostart Скрипт автостарта. ~/.config/frankenwm/polybar/ Конфиг и скрипты polybar. Данный wm необходимо перекомпилировать после изменения config.h.
-cd ~/.config/frankenwm/src sudo make clean install Необходим restart(выйти и зайти) killall frankenwm.</description></item></channel></rss>
+cd ~/.config/frankenwm/src sudo make clean install Необходим restart(выйти и зайти) killall frankenwm.</description></item><item><title>Swaywm тайловый менеджер окон</title><link>https://ctlos.github.io/wiki/wm/sway/</link><pubDate>Fri, 29 Oct 2021 14:35:08 +0300</pubDate><guid>https://ctlos.github.io/wiki/wm/sway/</guid><description>Sway — тайловый оконный менеджер wayland, почти аналог i3 в x11, swaywm.org.
+Представляю вашему внимаю готовый к употреблению wm с небольшим описание, немного скринов.
+Скачать iso образ # Данный оконный менеджер доступен в xfce iso, метод online установки.
+Скачать Конфигурационные файлы # Путь Описание ~/.config/sway/config.d/hotkeys Горячие клавиши. ~/.config/sway/config.d/app_conf Роли окон. ~/.config/sway/config.d/theme Внешний вид. ~/.</description></item></channel></rss>
