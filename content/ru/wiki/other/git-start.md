@@ -191,9 +191,48 @@ git push origin -d work
 git log
 ```
 
-Откат(предварительно, получить хэш).
+### Откат
+
+Предварительно, получить хэш.
 
 ```bash
 git reset --hard a3775a5485af0af20375cedf46112db5f813322a
 git push --force
 ```
+
+## Для контрибьюторов
+
+1. Форкаем оригинальный репозиторий https://github.com/ctlos/ctlosiso кнопкой **Fork**
+
+2. Клонируем форкнутый репозиторий
+
+```bash
+git clone https://github.com/user_login/ctlosiso
+cd ctlosiso
+```
+
+3. Создаем новую ветку
+
+```bash
+git checkout -b new_fix
+```
+
+4. Создаем upstream на оригинальный репозиторий
+
+```bash
+git remote add upstream https://github.com/ctlos/ctlosiso
+```
+
+5. Меняем файлы
+
+6. Делаем коммит и отправляем правки
+
+```bash
+git add .
+git commit -am "Fixes bla-bla"
+git push -u origin new_fix
+```
+
+7. Переходим в свой репозиторий `https://github.com/user_login/ctlosiso` и жмем кнопку **Compare & pull**
+
+8. Описываем какую проблему решает Пул Реквест с кратким описанием, зачем сделано изменение
