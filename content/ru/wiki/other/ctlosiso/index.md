@@ -105,12 +105,12 @@ cd ~/ctlos
 git clone --depth=1 https://github.com/ctlos/ctlosiso
 ```
 
-> Добавляем пользовательский репозиторий для aur пакетов. В `/ctlos/ctlosiso/pacman.conf`.
+> Добавляем пользовательский репозиторий для aur пакетов. В `/ctlos/ctlosiso/pacman.conf`. Замнените `user_name` на имя пользователя от которого работаете.
 
 ```bash
 [ctlos_repo]
 SigLevel = Optional TrustAll
-Server = file:///home/creio/ctlos/ctlos_repo/$arch
+Server = file:///home/user_name/ctlos/ctlos_repo/$arch
 ```
 
 Закоментировать репозиторий ctlos, если нужно.
@@ -127,7 +127,7 @@ Server = file:///home/creio/ctlos/ctlos_repo/$arch
 
 ```bash
 cd ctlosiso
-chmod +x {autobuild.sh,chroot.sh,mkarchiso}
+chmod +x {autobuild.sh,chroot.sh,mkarchiso.sh}
 ```
 
 * Пакеты: `packages.x86_64`
@@ -157,13 +157,13 @@ sudo nano /bin/pacstrap
 Изменить строку, для пропуска установленных пакетов.
 
 ```bash
-if ! pacman -r "$newroot" -Sy "${pacman_args[@]}"; then
+pacman_args+=(--noconfirm)
 ```
 
 На.
 
 ```bash
-if ! pacman -r "$newroot" -Sy --needed "${pacman_args[@]}"; then
+pacman_args+=(--noconfirm --needed)
 ```
 
 Удалить файлы блокировки.

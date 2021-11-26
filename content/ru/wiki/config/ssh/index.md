@@ -29,6 +29,8 @@ sudo systemctl enable sshd
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "ctlos@protonmail.com"
+# или так
+ssh-keygen -t rsa -q -N '' -f ~/.ssh/id_rsa
 ```
 
 Ключи упадут в `~/.ssh`.
