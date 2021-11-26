@@ -17,6 +17,5 @@ exec openbox-session Добавить в ~/.bashrc, если используе�
 nano ~/.zshrc Добавить наверх, после первой строки #!/usr/bin/env zsh.
 [[ -z $DISPLAY &amp;amp;&amp;amp; $XDG_VTNR -eq 1 ]] &amp;amp;&amp;amp; exec startx &amp;amp;&amp;gt; /dev/null Настройка сервиса # Выполнить.</description></item><item><title>Установка и настройка ssh</title><link>https://ctlos.github.io/wiki/config/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/ssh/</guid><description>Установка # Пакет должен быть установлен как на клиенте, так и сервере.
 sudo pacman -S openssh На сервере запустить и включить сервис в автостарт.
-sudo systemctl start sshd sudo systemctl enable sshd Настройка на клиенте # Генерация ключей # ssh-keygen -t rsa -b 4096 -C &amp;quot;ctlos@protonmail.com&amp;quot; Ключи упадут в ~/.ssh.
-Отправка ключа на сервер # ssh-copy-id username@remote_host Или так. Копируем ключ на сервер.
-cat .ssh/id_rsa.pub | ssh dj2@192.</description></item></channel></rss>
+sudo systemctl start sshd sudo systemctl enable sshd Настройка на клиенте # Генерация ключей # ssh-keygen -t rsa -b 4096 -C &amp;quot;ctlos@protonmail.com&amp;quot; # или так ssh-keygen -t rsa -q -N '' -f ~/.ssh/id_rsa Ключи упадут в ~/.ssh.
+Отправка ключа на сервер # ssh-copy-id username@remote_host Или так.</description></item></channel></rss>
