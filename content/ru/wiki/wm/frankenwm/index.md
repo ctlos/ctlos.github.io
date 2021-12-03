@@ -89,6 +89,6 @@ sudo make clean install
 `super+shift+Enter`    | Terminal urxvt.
 `super+r`              | Rofi - меню(лаунчер).
 `super+q`              | Закрыть окно.
-`super+shift+q`        | Закрыть frankenwm.
+`super+ctrl+q`         | Закрыть frankenwm.
 
 Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://telegram.me/ctlos).
