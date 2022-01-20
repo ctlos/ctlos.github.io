@@ -11,6 +11,8 @@ comments: true
 
 {{< img src="gnome.png" alt="Ctlos 2 2 1" class="wide" >}}
 
+> См. [Установка](/wiki/install/install-ctlos/), [скачать](/get/).
+
 ## Изменения
 
 - Добавлен кастомизированный GNOME в установке онлай. Из коробки включены расширения gnome-shell с интеграцией в firefox.
