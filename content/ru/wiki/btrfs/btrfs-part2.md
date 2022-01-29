@@ -342,17 +342,6 @@ cp -L /etc/resolv.conf /mnt/etc
 swapon /dev/sda3
 ```
 
-Начиная с ядра 5.0 можно создать swap-файл, swap-файл должен располагаться целиком на одном устройстве, создаваться с отключенным COW и сжатием.
-
-```bash
-touch /swap             # создаем пустой файл /swap
-chmod go-r /swap        # swap должен иметь права 600
-chattr +C /swap         # отключаем COW, сжатие тоже отключается
-fallocate /swap -l4g    # файл 4Gb
-mkswap /swap
-swapon /swap
-```
-
 Редактируем FSTAB, или запускаем genfstab.
 
 ```bash

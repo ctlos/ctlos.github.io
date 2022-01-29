@@ -249,12 +249,14 @@ swapon /dev/sda2
 Начиная с ядра 5.0 можно создать swap-файл, swap-файл должен располагаться целиком на одном устройстве, создаваться с отключенным COW и сжатием.
 
 ```bash
-touch /swap             # создаем пустой файл /swap
-chmod go-r /swap        # swap должен иметь права 600
-chattr +C /swap         # отключаем COW, сжатие тоже отключается
-fallocate /swap -l4g    # файл 4Gb
-mkswap /swap
-swapon /swap
+truncate -s 0 /swapfile
+chattr +C /swapfile
+btrfs property set /swapfile compression none
+fallocate /swapfile -l4g
+chmod 600 /swapfile
+mkswap /swapfile
+lsattr /swapfile
+swapon /swapfile
 ```
 
 Проверим.
