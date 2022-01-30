@@ -51,13 +51,13 @@ EndSection
 ## Nvidia
 
 ```bash
-yay -S nvidia nvidia-settings nvidia-utils opencl-nvidia opencl-headers lib32-nvidia-utils lib32-opencl-nvidia
+yay -S nvidia nvidia-utils nvidia-settings opencl-nvidia opencl-headers lib32-nvidia-utils lib32-opencl-nvidia
 ```
 
 Драйвер nvidia может иметь префикс nvidia-390xx, конкретно для вашей карты, уточняйте на сайте производителя и в [Арч-вики](https://wiki.archlinux.org/index.php/NVIDIA).
 
 ```bash
-yay -S lib32-opencl-nvidia-390xx lib32-nvidia-390xx-utils opencl-nvidia-390xx nvidia-390xx-utils nvidia-390xx-settings nvidia-390xx-dkms
+yay -S nvidia-390xx-dkms nvidia-390xx-utils nvidia-390xx-settings opencl-nvidia-390xx lib32-opencl-nvidia-390xx lib32-nvidia-390xx-utils
 ```
 
 Создание xorg файла `/etc/X11/xorg.conf`.

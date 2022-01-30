@@ -114,16 +114,3 @@ flatpak uninstall com.valvesoftware.Steam
 ```bash
 flatpak uninstall --unused
 ```
-
-### Winepak
-
-Дополнительный репозиторий Winepak (игры, WoT и др.).
-
-- [https://winepak.org](https://winepak.org/).
-- [https://github.com/winepak/applications](https://github.com/winepak/applications).
-
-Добавление репозитория.
-
-```bash
-flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo
-```
