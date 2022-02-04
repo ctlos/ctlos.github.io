@@ -44,7 +44,7 @@ ssh-copy-id username@remote_host
 Или так. Копируем ключ на сервер.
 
 ```bash
-cat .ssh/id_rsa.pub | ssh dj2@192.168.1.35 'mkdir -p ~/.ssh && cat >> .ssh/authorized_keys'
+cat .ssh/id_rsa.pub | ssh bibo@192.168.1.35 'mkdir -p ~/.ssh && cat >> .ssh/authorized_keys'
 ```
 
 ### Настройка конфига
@@ -61,18 +61,18 @@ Host *
     #ForwardX11 yes
     #ForwardX11Trusted yes
 
-Host dj
+Host bibo
     ForwardAgent yes
     ForwardX11 yes
     ForwardX11Trusted yes
     HostName 198.157.18.18
     Port 223
-    User dj2
+    User bibo
 ```
 
 Блок с `Host *` задает глобальные настройки для всех серверов.
 
-Данный блок с `Host dj` конкретно под сервер.
+Данный блок с `Host bibo` конкретно под сервер.
 
 - Host: может быть любой, для вашего удобства.
 - Строки c `Forward`: включаем X11Forwarding.
@@ -91,7 +91,7 @@ PermitRootLogin no
 Если правим, то укажем кому можно.
 
 ```bash
-AllowUsers dj2 bob
+AllowUsers bibo boba
 ```
 
 Отключение авторизации по паролю.
