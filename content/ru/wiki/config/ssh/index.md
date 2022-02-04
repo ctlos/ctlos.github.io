@@ -183,3 +183,13 @@ ssh root@199.199.199.199
 ```bash
 ssh -p 2222 username@127.0.0.1
 ```
+
+> Если вы собираетесь пробросить на сервер отличный от ssh порт, например 8080, то обязательно пропишите в конфиге sshd `GatewayPorts yes`.
+
+```bash
+sudo nano /etc/ssh/sshd_config
+
+GatewayPorts yes
+
+sudo systemctl restart sshd
+```
