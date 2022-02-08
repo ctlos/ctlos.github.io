@@ -24,8 +24,4 @@ Ctlos Linux создаётся и поддерживается на добров
 
 - [Digital Ocean](https://m.do.co/c/49c4dbf3d0ca), бонус 100$ на 2 месяца.
 - [Vultr](https://www.vultr.com/?ref=8527669-6G), бонус 100$.
-- [Fozzy](https://fozzy.com/aff.php?aff=17247), промокод: **TRAFF** на скидку 10%.
-- [Hostinger](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=60923&url_id=65).
 - [REG.RU](https://www.reg.ru/), промокод: **8A39-8FCA-CDB4-F765** на скидку 5%.
-
-> Eсли активно будете использовать [Digital Ocean](https://m.do.co/c/49c4dbf3d0ca), в настройках аккаунта указывайте страну **Украина и рандомный адрес**, не будет начисляться НДС. Это касается практически любых подобных сервисов.
