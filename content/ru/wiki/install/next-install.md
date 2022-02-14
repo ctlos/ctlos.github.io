@@ -61,6 +61,21 @@ inxi -F
 speed
 ```
 
+## Grub
+
+> Как добавить в загрузчик grub другие os?
+
+```bash
+sudo pacman -S os-prober
+sudo sed -i '/GRUB_DISABLE_OS_PROBER/s/^#//g' /etc/default/grub
+# или раскомментить строку GRUB_DISABLE_OS_PROBER
+sudo nano /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+После перезагрузки в grub должны быть доступны другие дистрибутивы и ос.
+
+
 ## Смена оболочки
 
 Если вас не устраивает `zsh`, всегда можно переключить.
