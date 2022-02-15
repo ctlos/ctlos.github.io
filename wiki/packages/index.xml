@@ -14,4 +14,7 @@ bind_to_address &amp;quot;0.0.0.0&amp;quot; port &amp;quot;6600&amp;quot; music_
 Ffmpeg — мощный инструмент конвертирования, кодирования и записи чего угодно.
 yay -S ffmpeg Результат с live-stream-radio youtu.be/Glu60hqtptc. Результат на чистом ffmpeg youtu.be/LC640rkEs3Y. Устновка nvm # Скопируйте команду curl в репо nvm, так как версия может изменится.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash И добавьте в конце ~/.zshrc или ~/.bashrc переменные среды.
-export NVM_DIR=&amp;quot;$HOME/.config/nvm&amp;quot; # Lazy load if [[ -s &amp;quot;$NVM_DIR/nvm.</description></item></channel></rss>
+export NVM_DIR=&amp;quot;$HOME/.config/nvm&amp;quot; # Lazy load if [[ -s &amp;quot;$NVM_DIR/nvm.</description></item><item><title>Установка и настройка ssh</title><link>https://ctlos.github.io/wiki/packages/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/packages/ssh/</guid><description>Установка # Пакет должен быть установлен как на клиенте, так и сервере.
+sudo pacman -S openssh На сервере запустить и включить сервис в автостарт.
+sudo systemctl start sshd sudo systemctl enable sshd Настройка на клиенте # Генерация ключей # ssh-keygen -t rsa -b 4096 -C &amp;quot;ctlos@protonmail.com&amp;quot; # или так ssh-keygen -t rsa -q -N '' -f ~/.ssh/id_rsa Ключи упадут в ~/.ssh.
+Отправка ключа на сервер # ssh-copy-id username@remote_host Или так.</description></item></channel></rss>
