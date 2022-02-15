@@ -39,6 +39,28 @@ sudo rm /var/lib/pacman/db.lck
 
 [Package signing](https://wiki.archlinux.org/index.php/Pacman_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)/Package_signing_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)#%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC)
 
+## Используйте алиасы
+
+Алиасы — сокращение команд, находятся в файле `~/.alias_zsh`.
+
+**Yay** работает, как **pacman**, т.е. выполняет теже функции, поэтому я в основном использую команды `yay` для манипуляции с пакетами. Вот данный набор из файла.
+
+- `alias y="yay -S"` установка.
+- `alias yn="yay -S --noconfirm"` установка без подтверждения.
+- `alias ys="yay"` поиск с дальнейшим выбором по цифре.
+- `alias ysn="yay --noconfirm"` поиск с дальнейшим выбором по цифре, без подтверждения.
+- `alias yc="yay -Sc"` очистка кэша.
+- `alias yy="yay -Syy"` синхронизация баз зеркал.
+- `alias yu="yay -Syyu"` обновление.
+- `alias yun="yay -Syyu --noconfirm"` обновление без подтверждения.
+- `alias yr="yay -R"` удаление пакет(а,ов).
+- `alias yrn="yay -R --noconfirm"` удаление пакет(а,ов) без подтверждения.
+
+Пример удаления: `yrn htop`.
+
+Команда `cache`, для очистки кэша пакетов и оптимизация базы pacman.
+Все исполняемые скрипты лежат в `~/.bin`.
+
 ## Информация о системе
 
 Краткая информация о Вашей системе.
@@ -59,18 +81,6 @@ inxi -F
 
 ```bash
 speed
-```
-
-## Grub
-
-> Как добавить в загрузчик grub другие os?
-
-```bash
-sudo pacman -S os-prober
-sudo sed -i '/GRUB_DISABLE_OS_PROBER/s/^#//g' /etc/default/grub
-# или раскомментить строку GRUB_DISABLE_OS_PROBER
-sudo nano /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 После перезагрузки в grub должны быть доступны другие дистрибутивы и ос.
@@ -154,31 +164,3 @@ Exec = /usr/bin/reflector -c ru,by,ua,pl -p https,http --sort rate -a 12 -l 10 -
 ```
 
 Данный хук будет выполнен после обновления `pacman-mirrorlist`.
-
-## Левое меню thunar
-
-```bash
-xdg-user-dirs-gtk-update
-```
-
-## Используйте алиасы
-
-Алиасы — сокращение команд, находятся в файле `~/.alias_zsh`.
-
-**Yay** работает, как **pacman**, т.е. выполняет теже функции, поэтому я в основном использую команды `yay` для манипуляции с пакетами. Вот данный набор из файла.
-
-- `alias y="yay -S"` установка.
-- `alias yn="yay -S --noconfirm"` установка без подтверждения.
-- `alias ys="yay"` поиск с дальнейшим выбором по цифре.
-- `alias ysn="yay --noconfirm"` поиск с дальнейшим выбором по цифре, без подтверждения.
-- `alias yc="yay -Sc"` очистка кэша.
-- `alias yy="yay -Syy"` синхронизация баз зеркал.
-- `alias yu="yay -Syyu"` обновление.
-- `alias yun="yay -Syyu --noconfirm"` обновление без подтверждения.
-- `alias yr="yay -R"` удаление пакет(а,ов).
-- `alias yrn="yay -R --noconfirm"` удаление пакет(а,ов) без подтверждения.
-
-Пример удаления: `yrn htop`.
-
-Команда `cache`, для очистки кэша пакетов и оптимизация базы pacman.
-Все исполняемые скрипты лежат в `~/.bin`.

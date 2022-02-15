@@ -2,11 +2,47 @@
 title: Решение проблем
 menu:
   wiki:
-    parent: "config"
-weight: 30
+    parent: "install"
+weight: 50
 ---
 
-Некоторые решенные проблемы описаны на форуме [forum.ctlos.ru](https://forum.ctlos.ru/viewforum.php?id=4).
+Некоторые решенные проблемы описаны на форуме [forum.ctlos.ru](https://forum.ctlos.ru/c/tehnicheskie-problemy-i-pomoshh/5). Нашли проблему, или есть идеи, как что-то улучшить, создайте тему на форуме(ссылка выше), либо запрос на [github](https://github.com/ctlos/ctlosiso/issues).
+
+## Grub
+
+> Как добавить в загрузчик grub другие os?
+
+```bash
+sudo pacman -S os-prober
+sudo sed -i '/GRUB_DISABLE_OS_PROBER/s/^#//g' /etc/default/grub
+# или раскомментить строку GRUB_DISABLE_OS_PROBER
+sudo nano /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+[Grub efi](/wiki/other/grub-uefi/).
+
+## Сброс root пароля
+
+[Reset_root_password](https://wiki.archlinux.org/index.php/Reset_root_password_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)).
+
+## Thunar
+
+Генерация пунктов в левом меню.
+
+```bash
+xdg-user-dirs-gtk-update
+```
+
+### Контекстное меню thunar
+
+Добавляем дополнительные пункты для создания файлов.
+
+```bash
+XDG_TEMPLATES_DIR=$(xdg-user-dir TEMPLATES)
+cd "$XDG_TEMPLATES_DIR"
+touch 'New Text File.txt' && touch 'New Word File.doc' && touch 'New Excel Spreadsheet.xls'
+```
 
 ## Размер tmp
 
@@ -76,17 +112,3 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
 "RealTimeIsUniversal"=dword:00000001
 ```
-
-## Контекстное меню thunar
-
-Добавляем дополнительные пункты для создания файлов.
-
-```bash
-XDG_TEMPLATES_DIR=$(xdg-user-dir TEMPLATES)
-cd "$XDG_TEMPLATES_DIR"
-touch 'New Text File.txt' && touch 'New Word File.doc' && touch 'New Excel Spreadsheet.xls'
-```
-
-## Сброс root пароля
-
-[Reset_root_password](https://wiki.archlinux.org/index.php/Reset_root_password_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)).

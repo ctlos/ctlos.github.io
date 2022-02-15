@@ -3,7 +3,7 @@ title: Автологин
 menu:
   wiki:
     parent: "config"
-weight: 40
+weight: 20
 ---
 
 ## Автологин xinitrc

@@ -4,7 +4,7 @@ description: Мануал по настройке ssh в Linux.
 post_photo_path: ssh.png
 menu:
   wiki:
-    parent: "config"
+    parent: "packages"
 weight: 50
 ---
 
@@ -145,6 +145,8 @@ sudo cp -r ~/user_name/.Xauthority /root
 ## Проброс портов
 
 Через ssh можно пробрасывать порты в обе стороны и даже строить связки, мосты. См. [https://unix.stackexchange.com/a/118650](https://unix.stackexchange.com/a/118650).
+
+Npm пакет для проброса портов [localtunnel](https://theboroer.github.io/localtunnel-www/).
 
 - `199.199.199.199` IP адрес сервера в интернете
 - `127.0.0.1` IP локальной машины, localhost

@@ -67,14 +67,6 @@ pacman-key --populate
 pacman-key --refresh-keys
 ```
 
-### Сортируем зеркала reflector
-
-```bash
-pacman -S reflector
-
-reflector --verbose -a1 -f10 -l70 -p https -p http --sort rate --save /etc/pacman.d/mirrorlist
-```
-
 ### Устанавливаем зеркала
 
 ```bash
@@ -88,14 +80,14 @@ Server = https://cvc.keybase.pub/$repo
 
 ## Ctlos aur
 
-Можете воспользоваться [Ctlos aur](https://ctlos.duckdns.org/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
+Можете воспользоваться [Ctlos aur](https://cloud.ctlos.ru/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
 
 ```bash
 nano /etc/pacman.conf
 
 [ctlos-aur]
 SigLevel = Optional TrustAll
-Server = https://ctlos.duckdns.org/ctlos-aur
+Server = https://cloud.ctlos.ru/ctlos-aur
 ```
 
 ### Зеркала

@@ -2,15 +2,15 @@
 title: Рекомендации
 menu:
   wiki:
-    parent: "config"
-weight: 20
+    parent: "install"
+weight: 60
 ---
 
 ## Linux-zen
 
 Установка другого ядра, [Kernels](https://wiki.archlinux.org/index.php/Kernels).
 
-Если у вас карта [nvidia](https://wiki.archlinux.org/index.php/NVIDIA_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)), то драйвер нужно заменить `sudo pacman -S nvidia-390xx-dkms`.
+Если у вас карта [nvidia](https://wiki.archlinux.org/index.php/NVIDIA_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)), то драйвер нужно заменить.
 
 ```bash
 sudo pacman -S linux-zen linux-zen-headers

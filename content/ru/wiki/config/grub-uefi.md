@@ -2,8 +2,8 @@
 title: Установка Grub UEFI
 menu:
   wiki:
-    parent: "other"
-weight: 20
+    parent: "config"
+weight: 30
 ---
 
 ## Подготовка

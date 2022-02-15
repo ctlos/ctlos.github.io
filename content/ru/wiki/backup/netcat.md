@@ -1,6 +1,6 @@
 ---
 title: Работа с Netcat, ssh, rsync
-post_video: eyULZXXs_Wk
+post_video:
 menu:
   wiki:
     title: Netcat, ssh, rsync
