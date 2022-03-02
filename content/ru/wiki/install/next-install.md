@@ -20,9 +20,16 @@ sudo pacman-key --init && sudo pacman-key --populate && sudo pacman-key --refres
 > Если ошибка с содержанием `hkps.pool.sks-keyservers.net`, не может достучаться до сервера ключей выполните команды ниже. Указываем другой сервер ключей.
 
 ```bash
+--keyserver hkp://pool.sks-keyservers.net
+--keyserver hkp://keyserver.ubuntu.com
+```
+
+```bash
 sudo pacman-key --init && sudo pacman-key --populate
 
-sudo pacman-key --refresh-keys --keyserver keys.gnupg.net && sudo pacman -Syy
+sudo pacman-key --refresh-keys --keyserver keys.gnupg.net
+
+sudo pacman -Syy
 ```
 
 > Если ошибка с содержанием `/var/lib/pacman/sync`, выполните команду ниже и повторите пункт с обновлением ключей.
