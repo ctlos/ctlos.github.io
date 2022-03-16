@@ -25,3 +25,4 @@ Ctlos Linux создаётся и поддерживается на добров
 - [Digital Ocean](https://m.do.co/c/49c4dbf3d0ca), бонус 100$ на 2 месяца.
 - [Vultr](https://www.vultr.com/?ref=8527669-6G), бонус 100$.
 - [REG.RU](https://www.reg.ru/), промокод: **8A39-8FCA-CDB4-F765** на скидку 5%.
+- [Fozzy](https://fozzy.com/aff.php?aff=17247&page=domains), промокод: **CTLOS** на скидку 10%.
