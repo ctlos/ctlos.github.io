@@ -14,10 +14,10 @@ description: Актуальные релизы для скачивания вс�
 
 ## Зеркала для скачивания
 
-- [cloud.ctlos.ru](https://cloud.ctlos.ru)
 - [OSDN releases](https://osdn.net/projects/ctlos/releases/)
 - [Github releases](https://github.com/ctlos/ctlosiso/releases)
-<!-- - [ctlos.duckdns.org](https://ctlos.duckdns.org/iso) -->
-<!-- - [Ipfs](https://ctlos.fission.app/) -->
+- [ipfs](https://ipfs.ctlos.ru)
+<!-- - [cloud.ctlos.ru](https://cloud.ctlos.ru) -->
+<!-- - [ctlos-ipfs](https://ctlos-ipfs.fission.app/iso) -->
 
 > [Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).
