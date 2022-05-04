@@ -134,12 +134,13 @@ sudo pacman -S steam ttf-liberation lib32-alsa-plugins lib32-curl
 sudo pacman -S tor torsocks
 ```
 
-Запуск, остановка, статус сервиса tor.
+Запуск, остановка, статус, лог сервиса tor.
 
 ```bash
 sudo systemctl start tor
 sudo systemctl stop tor
 sudo systemctl status tor
+sudo journalctl -xeu tor
 ```
 
 Запуск через tor.
