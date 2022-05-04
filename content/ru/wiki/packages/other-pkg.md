@@ -134,11 +134,12 @@ sudo pacman -S steam ttf-liberation lib32-alsa-plugins lib32-curl
 sudo pacman -S tor torsocks
 ```
 
-Запуск, остановка сервиса tor.
+Запуск, остановка, статус сервиса tor.
 
 ```bash
 sudo systemctl start tor
 sudo systemctl stop tor
+sudo systemctl status tor
 ```
 
 Запуск через tor.
@@ -151,7 +152,7 @@ torify ssh user@blabla -p 22
 Проверка ip.
 
 ```bash
-curl --max-time 10 -w '\n' http://ident.me
+curl ident.me
 ```
 
 В firefox используйте расширение FoxyProxy, или в параметрах сети укажите только SOCKS5.
@@ -164,7 +165,36 @@ Chromium запустите с флагом.
 chromium --proxy-server='socks://127.0.0.1:9050' &
 ```
 
-Если tor отказывается работать должным образом попробуйте отредактировать сервис.
+### Мосты tor
+
+Некоторые провайдеры могут блокировать выход в tor, можно попробовать указать мост [bridges.torproject.org](https://bridges.torproject.org/).
+
+```bash
+# директория с доп конфигами
+sudo mkdir -p /etc/torrc.d/
+# раскоментить include в основном конфиге
+sudo nano /etc/tor/torrc
+# в конце файла строка
+%include /etc/torrc.d/*.conf
+# кастомный конфиг
+sudo nano /etc/torrc.d/custom.conf
+# указать строки
+UseBridges 1
+ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
+Bridge obfs4 15.235.40.232:4276 9A1B05F0C622A0EC13902876302FA2E1B2EA4B5F cert=RWCkXxF0kknQs2T7yIUBPGJUTlUpKXdzVlc9uKdZtbzvcqNvjQHZYGG0kWzlJxbcLaqaQg iat-mode=0
+```
+
+Установить obfs4proxy.
+
+```bash
+yay obfs4proxy
+```
+
+Данные obfs4 можно получить у telegram бота: [@GetBridgesBot](https://t.me/GetBridgesBot), отправив ему `/bridges`. Когда я это тестировал, бот выдал не рабочие данные для меня.
+
+Другой способ получить список мостов. Отправьте email на адрес `bridges@torproject.org`. Оставьте тему письма пустой, а в теле cообщения напишите "get transport obfs4". Пожалуйста, обратите внимание: вы должны отправить письмо с Riseup или Gmail.
+
+> Если tor отказывается работать должным образом попробуйте отредактировать сервис.
 
 ```bash
 sudo nano /usr/lib/systemd/system/tor.service
