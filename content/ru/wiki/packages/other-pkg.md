@@ -153,6 +153,13 @@ torify ssh user@blabla -p 22
 
 ```bash
 curl ident.me
+# через tor
+torify curl ident.me
+```
+
+```bash
+# check tor
+curl --socks5 localhost:9050 --socks5-hostname localhost:9050 -s https://check.torproject.org/ | cat | grep -m 1 Congratulations | xargs
 ```
 
 В firefox используйте расширение FoxyProxy, или в параметрах сети укажите только SOCKS5.
