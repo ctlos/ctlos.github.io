@@ -19,19 +19,18 @@
     </div>
   </div>
 </section>
-
 {{ end }}
 
-{{ define "sidebar-prefooter" }}
+{{ define "prefooter" }}
   {{ if eq $.Site.Language.LanguageName "Russian" }}
-  <section class="section section-sm">
+  <section class="section">
     <div class="container">
 
       <div class="row justify-content-center text-center">
         <div class="col-lg-12">
           <h2>Графический установщик <a href="https://github.com/calamares/calamares" target="_blank">Calamares</a></h2>
           <p class="fs-5">Включает расширенную функцию разбиения дисков с поддержкой как ручных, так и автоматических операций разбиения.</p>
-          <img class="d-block w-100" src="/images/calamares.png" alt="calamares">
+          <img class="d-block w-100 img-shadow" src="/images/calamares.png" alt="calamares">
         </div>
       </div>
 
@@ -39,7 +38,7 @@
         <div class="col-lg-12">
           <h2 class="h2">Графический установщик программ Pamac</h2>
           <p class="fs-5">Установка, обновление, удаление пакетов. Разбивка по категориям.</p>
-          <img class="d-block w-100" src="/images/ctlos.jpg" alt="pamac aur">
+          <img class="d-block w-100 img-shadow" src="/images/pamac.png" alt="pamac aur">
         </div>
       </div>
 
@@ -51,7 +50,7 @@
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Доступность 💻</h2>
-          <p>Представлен в кастомные вариациях de/wm: Xfce, Openbox, <a href="/wiki/wm/bspwm">Bspwm</a>, <a href="/wiki/wm/frankenwm">FrankenWm</a>, I3-gaps Wm. Другие доступны в стандартной конфигурации(дефолт).</p>
+          <p>Представлен в кастомные вариациях de/wm: Xfce, Openbox, <a href="/wiki/wm/bspwm">Bspwm</a>, <a href="/wiki/wm/frankenwm">FrankenWm</a>, <a href="/wiki/wm/sway">Sway</a>, I3-gaps Wm. Другие доступны в стандартной конфигурации(дефолт).</p>
         </div>
         <div class="col-lg-5">
           <h2 class="h4">Просто настроенный Rach 🚀</h2>
@@ -77,14 +76,4 @@
     </div>
   </section>
   {{ end }}
-{{ end }}
-
-{{ define "sidebar-footer" }}
-<section class="section section-sm container-fluid">
-  <div class="row justify-content-center">
-    <div class="col-lg-9">
-      {{- .Content -}}
-    </div>
-  </div>
-</section>
 {{ end }}

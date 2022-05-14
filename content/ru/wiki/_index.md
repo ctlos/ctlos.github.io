@@ -59,13 +59,12 @@ Ctlos Linux — базируется на Arch Linux, iso образ собра�
 > Если вы обнаружите **какие-либо проблемы**, пожалуйста, не стесняйтесь обращаться. Любые отзывы приветствуются.
 
 - [Telegram Chat](https://telegram.me/ctlos)
-- [Matrix Chat](https://vk.cc/bXYy0x)
+- [Matrix Chat](https://matrix.to/#/#ctlos:matrix.org)
 - [Discord](https://discord.com/invite/m6uFRp4)
 - [Паблик VK](https://vk.com/ctlos)
 - [Forum Ctlos](https://forum.ctlos.ru)
 - [Дорожная карта](https://github.com/orgs/ctlos/projects/3)
 - [Баг трекер](https://github.com/ctlos/ctlosiso/issues)
-- [Status services](https://status.ctlos.ru)
 - [Исходный код сайта](https://github.com/ctlos/ctlos.github.io)
 - [YouTube канал автора](https://youtube.com/channel/UCPCp_ZnMKEwYdnA_YfOZrZg?sub_confirmation=1)
 

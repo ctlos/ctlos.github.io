@@ -1,3 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper-container {
+  position: relative;
+  min-height: 100%;
+}
+
+.wrap {
+    padding-bottom: 4rem;
+}
+
+.home .wrap {
+    padding-bottom: 0;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 .contributors .content,
 .blog .content,
 .page .content,
