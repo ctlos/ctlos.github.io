@@ -122,7 +122,7 @@ ffmpeg -i 1.avi -i 2.avi -i 3.avi -i 4.avi -filter_complex "nullsrc=size=640x480
 
 ### Наложение аудио
 
-Опция `shortest` — если аудио и видео на входе имеют разную длительность по времени, то результат будет иметь длительность самого длинного компонента.
+Опция `shortest` — если аудио и видео на входе имеют разную длительность по времени, то результат будет иметь длительность наименьшего компонента.
 
 ```bash
 ffmpeg -i видео.mp4 -i аудио.wav -c:v copy -c:a copy -shortest результат.mkv
@@ -140,6 +140,12 @@ ffmpeg -i video4.mp4 -i wave.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=
 
 ```bash
 ffmpeg -i video4.mp4 -stream_loop -1 -i bla.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=0.04[a2];[a1][a2]amerge=inputs=2" -c:v copy -c:a libmp3lame -shortest out_mp3.mp4
+```
+
+Понижаем звук аудио.
+
+```bash
+ffmpeg -i video.mp4 -stream_loop -1 -i bla.mp3 -filter:a "volume=0.8" -shortest res.mp4
 ```
 
 ## Конвертировать видео в gif
