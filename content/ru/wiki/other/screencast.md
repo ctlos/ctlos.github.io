@@ -142,6 +142,12 @@ ffmpeg -i video4.mp4 -i wave.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=
 ffmpeg -i video4.mp4 -stream_loop -1 -i bla.mp3 -filter_complex "[0:a]volume=1[a1];[1:a]volume=0.04[a2];[a1][a2]amerge=inputs=2" -c:v copy -c:a libmp3lame -shortest out_mp3.mp4
 ```
 
+Если видео без звука.
+
+```bash
+ffmpeg -i video4.mp4 -stream_loop -1 -i bla.mp3 -filter_complex "[1:a]volume=0.8[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -shortest out.mp4
+```
+
 Понижаем звук аудио.
 
 ```bash
