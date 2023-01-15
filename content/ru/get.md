@@ -16,7 +16,7 @@ description: Актуальные релизы для скачивания вс�
 
 - [OSDN releases](https://osdn.net/projects/ctlos/releases/)
 - [Github releases](https://github.com/ctlos/ctlosiso/releases)
-- [ipfs](https://ipfs.ctlos.ru)
+<!-- - [ipfs](https://ipfs.ctlos.ru) -->
 <!-- - [cloud.ctlos.ru](https://cloud.ctlos.ru) -->
 <!-- - [ctlos-ipfs](https://ctlos-ipfs.fission.app/iso) -->
 
