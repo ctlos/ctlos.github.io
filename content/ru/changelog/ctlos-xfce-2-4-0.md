@@ -6,6 +6,8 @@ contributors: ["Alex Creio"]
 comments: true
 ---
 
+Хотелось бы увидеть от вас вывод `sudo journalctl -xb -0 -p 3`, как в live, так и после установки, если в выводе присутствуют ошибки, то пришлите в телеграм чат [@ctlos](https://telegram.me/ctlos).
+
 > См. [Установка](/wiki/install/install-ctlos/), [скачать](/get/).
 
 ## Изменения
