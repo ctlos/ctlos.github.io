@@ -1,7 +1,7 @@
 ---
 title: Релиз Ctlos Linux — Xfce v1.6.0
 date: 2020-03-12
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 ![Xfce v1.6.0](xfce1-6-0.png)

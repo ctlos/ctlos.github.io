@@ -4,7 +4,7 @@ description: ""
 lead: "В метод установки online добавлен новый оконный менеджер Sway💪."
 date: 2021-10-29T00:28:34+03:00
 images: ["xfce-2-2-0.png"]
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 draft: false
 comments: true
 ---

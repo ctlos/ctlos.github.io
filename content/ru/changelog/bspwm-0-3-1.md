@@ -1,7 +1,7 @@
 ---
 title: Релиз Ctlos Linux — Bspwm v0.3.1
 date: 2020-09-03
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 comments: true
 ---
 

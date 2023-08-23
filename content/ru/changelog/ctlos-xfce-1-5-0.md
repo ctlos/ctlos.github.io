@@ -1,7 +1,7 @@
 ---
 title: Ctlos Linux Xfce v1.5.0
 date: 2019-11-10
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 Ядро 5.3.8.

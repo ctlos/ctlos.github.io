@@ -6,6 +6,6 @@ date: 2020-11-04T09:19:42+01:00
 lastmod: 2020-11-04T09:19:42+01:00
 weight: 50
 images: ["say-hello-to-doks.png"]
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 draft: true
 ---

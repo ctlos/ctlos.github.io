@@ -63,6 +63,7 @@ Ctlos Linux — базируется на Arch Linux, iso образ собра�
 - [Discord](https://discord.com/invite/m6uFRp4)
 - [Паблик VK](https://vk.com/ctlos)
 - [Forum Ctlos](https://forum.ctlos.ru)
+- [Uptime](https://status.ctlos.ru)
 - [Дорожная карта](https://github.com/orgs/ctlos/projects/3)
 - [Баг трекер](https://github.com/ctlos/ctlosiso/issues)
 - [Исходный код сайта](https://github.com/ctlos/ctlos.github.io)
@@ -71,13 +72,13 @@ Ctlos Linux — базируется на Arch Linux, iso образ собра�
 ## Контакты
 
 - [Telegram](https://telegram.me/cretm)
-- [Keybase](https://keybase.io/cvc)
+- [Keybase Proof](https://keybase.io/cvc)
 - [admin@ctlos.ru](mailto:admin@ctlos.ru)
 
 ## Автор
 
-{{< img src="/images/contributors/creio.png" alt="Alex Creio" class="rounded-circle" width="150px" >}}
+{{< img src="/images/contributors/creio.png" alt="creio" class="rounded-circle" width="150px" >}}
 
-[Alex Creio](https://creio.github.io) — улыбок тебе, деривативный топор.
+[@creio](https://creio.ctlos.ru) — улыбок тебе, деривативный топор.
 
-> Noname которого не будет на дистроватч.
+> `Noname` которого не будет на дистроватч.

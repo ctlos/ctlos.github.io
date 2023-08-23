@@ -1,7 +1,7 @@
 ---
 title: Ctlos Linux Xfce v1.3.0
 date: 2019-04-27
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 Заменил менеджер входа на sddm. Ядро 5.0.9.

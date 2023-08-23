@@ -1,7 +1,7 @@
 ---
 title: Релиз Ctlos Linux — I3 v1.0.0
 date: 2020-01-08
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 Всем здравия! Как и говорил ранее, вынес i3-gaps в отдельный релиз.

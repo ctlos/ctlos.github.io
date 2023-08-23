@@ -1,7 +1,7 @@
 ---
 title: Ctlos Linux Xfce v1.4.0
 date: 2019-06-11
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 Блокировка экрана **i3lock-fancy**, установку можно выполнять без интернет соединения. Ядро 5.1.8.

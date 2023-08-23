@@ -1,7 +1,7 @@
 ---
 title: Релиз Ctlos Linux — Xfce v1.8.0
 date: 2020-06-27
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 **Добавлено (added):**

@@ -2,7 +2,7 @@
 title: Релиз Ctlos Linux — Xfce v2.1.0
 lead: ""
 date: 2021-07-03
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 comments: true
 ---
 

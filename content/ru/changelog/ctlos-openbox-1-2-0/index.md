@@ -1,7 +1,7 @@
 ---
 title: Релиз Ctlos Linux — Openbox v1.2.0
 date: 2020-03-11
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 ![Openbox v1.2.0](ob1.2.0.png)

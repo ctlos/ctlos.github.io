@@ -2,7 +2,7 @@
 title: Релиз Ctlos Linux — Openbox,i3 v2.2
 date: 2019-05-25
 images: [""]
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 ---
 
 ![Openbox v2.2](ob2-2.png)

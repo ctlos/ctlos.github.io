@@ -2,7 +2,7 @@
 title: Релиз Ctlos Linux — Xfce v2.4.0
 lead: ""
 date: 2023-01-15
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 comments: true
 ---
 

@@ -4,7 +4,7 @@ description: ""
 lead: "В методе установки online добавлены кастомизированный GNOME и plasma."
 date: 2022-01-19T00:28:34+03:00
 images: ["gnome.png"]
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 draft: false
 comments: true
 ---

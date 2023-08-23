@@ -2,7 +2,7 @@
 title: Релиз Ctlos Linux — Xfce v2.3.0
 lead: ""
 date: 2022-05-02
-contributors: ["Alex Creio"]
+contributors: ["creio"]
 comments: true
 ---
 

@@ -9,9 +9,12 @@ Ctlos Linux создаётся и поддерживается на добров
 
 Спасибо! Ваша поддержка очень важна.
 
-### USDT
+### Crypto
 
 ```bash
+# BTC
+bc1qs7m87zuykazshg7ps934twjcpzerz90tp208nj
+
 # TRON network
 TVYAFv4zqxxAfWNroMGVyubH3SUW56qdsm
 
