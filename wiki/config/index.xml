@@ -1,14 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Конфигурирование on</title><link>https://ctlos.github.io/wiki/config/</link><description>Recent content in Конфигурирование on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/wiki/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Видео драйвера</title><link>https://ctlos.github.io/wiki/config/videocfg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/videocfg/</guid><description>Информация # Узнать информацию о видео карте.
-lspci -k | grep -A 2 -E &amp;quot;(VGA|3D)&amp;quot; xf86-video-amdgpu — новый, свободный драйвер для видеокарт AMD. xf86-video-ati — старый свободный драйвер для AMD. xf86-video-intel — драйвер для встроенной графики Intel. xf86-video-nouveau — свободный драйвер для карт NVIDIA. xf86-video-vesa — свободный драйвер, поддерживающий все карты, но с очень ограниченной функциональностью. Для виртуальной машины. nvidia — проприетарный драйвер для NVIDIA. Проприетарные драйвера обычно увеличивают производительность.</description></item><item><title>Автологин</title><link>https://ctlos.github.io/wiki/config/autologin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/autologin/</guid><description>Автологин xinitrc # Автологин с помощью ~/.xinitrc и автозапуск Х после логина.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Конфигурирование on</title><link>https://ctlos.github.io/wiki/config/</link><description>Recent content in Конфигурирование on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/wiki/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Видео драйвера</title><link>https://ctlos.github.io/wiki/config/videocfg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/videocfg/</guid><description>Информация #
+Узнать информацию о видео карте.
+lspci -k | grep -A 2 -E &amp;quot;(VGA|3D)&amp;quot;
+xf86-video-amdgpu — новый, свободный драйвер для видеокарт AMD. xf86-video-ati — старый свободный драйвер для AMD. xf86-video-intel — драйвер для встроенной графики Intel. xf86-video-nouveau — свободный драйвер для карт NVIDIA. xf86-video-vesa — свободный драйвер, поддерживающий все карты, но с очень ограниченной функциональностью. Для виртуальной машины. nvidia — проприетарный драйвер для NVIDIA. Проприетарные драйвера обычно увеличивают производительность.</description></item><item><title>Автологин</title><link>https://ctlos.github.io/wiki/config/autologin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/autologin/</guid><description>Автологин xinitrc #
+Автологин с помощью ~/.xinitrc и автозапуск Х после логина.
 В ~/.xinitrc необходимо прописать запуск DE, WM. В самом конце файла.
-exec openbox-session Добавить в ~/.bashrc, если используем Zsh, то ~/.zshrc. Узнать какой у вас шелл, команда: echo $SHELL.
-nano ~/.zshrc Добавить наверх, после первой строки #!/usr/bin/env zsh.
-[[ -z $DISPLAY &amp;amp;&amp;amp; $XDG_VTNR -eq 1 ]] &amp;amp;&amp;amp; exec startx &amp;amp;&amp;gt; /dev/null Настройка сервиса # Выполнить.</description></item><item><title>Установка Grub UEFI</title><link>https://ctlos.github.io/wiki/config/grub-uefi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/grub-uefi/</guid><description>Подготовка # Информация о диске.
-parted /dev/sda print Создать таблицу GPT. Создать boot раздел 512M, выбрать тип EFI.
-cfdisk parted /dev/sda print Форматируем.
-mkfs.fat -F32 /dev/sda1 Монтируем корень и другие, если надо.
-mount /dev/sda2 /mnt Создаем efi дерикторию и др., если надо.
-mkdir -p /mnt/boot/efi Монтируем boot EFI.
-mount /dev/sda1 /mnt/boot/efi Установка # Выполняем chroot.
-arch-chroot /mnt Установим Grub.
-pacman -S grub efibootmgr dosfstools os-prober Установим grub в /boot/efi.</description></item></channel></rss>
+exec openbox-session
+Добавить в ~/.bashrc, если используем Zsh, то ~/.zshrc. Узнать какой у вас шелл, команда: echo $SHELL.
+nano ~/.zshrc
+Добавить наверх, после первой строки #!/usr/bin/env zsh.
+[[ -z $DISPLAY &amp;amp;&amp;amp; $XDG_VTNR -eq 1 ]] &amp;amp;&amp;amp; exec startx &amp;amp;&amp;gt; /dev/null
+Настройка сервиса #
+Выполнить.</description></item><item><title>Установка Grub UEFI</title><link>https://ctlos.github.io/wiki/config/grub-uefi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/grub-uefi/</guid><description>Подготовка #
+Информация о диске.
+parted /dev/sda print
+Создать таблицу GPT. Создать boot раздел 512M, выбрать тип EFI.
+cfdisk
+parted /dev/sda print
+Форматируем.
+mkfs.fat -F32 /dev/sda1
+Монтируем корень и другие, если надо.
+mount /dev/sda2 /mnt
+Создаем efi дерикторию и др., если надо.
+mkdir -p /mnt/boot/efi
+Монтируем boot EFI.
+mount /dev/sda1 /mnt/boot/efi
+Установка #
+Выполняем chroot.
+arch-chroot /mnt
+Установим Grub.
+pacman -S grub efibootmgr dosfstools os-prober
+Установим grub в /boot/efi.</description></item></channel></rss>

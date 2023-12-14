@@ -1,8 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Btrfs on</title><link>https://ctlos.github.io/wiki/btrfs/</link><description>Recent content in Btrfs on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/wiki/btrfs/index.xml" rel="self" type="application/rss+xml"/><item><title>Btrfs установка и использование</title><link>https://ctlos.github.io/wiki/btrfs/btrfs-part1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/btrfs/btrfs-part1/</guid><description>Btrfs установка # Установите пакет пользовательских утилит.
-pacman -S btrfs-progs arch-install-scripts lsblk - подсветить все разделы чтобы определиться, что монтировать.
-# разбить диск, -z говорит обнулить таблицу разделов cfdisk -z /dev/sda Так как Btrfs не может содержать swap-файл, необходимо заранее позаботиться о разделе с подкачкой, если он вам нужен.
-mkswap /dev/sda2 Создаём файловую систему на разделе. Для разделов от 1ГБ и меньше, чтобы более эффективно использовать пространство, рекомендуется передать ключ -M к параметрам mkfs.</description></item><item><title>Btrfs перенос, восстановление</title><link>https://ctlos.github.io/wiki/btrfs/btrfs-part2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/btrfs/btrfs-part2/</guid><description>Перенос на раздел # pacman -S rsync btrfs-progs arch-install-scripts lsblk - подсветить все разделы что бы определиться что монтировать.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Btrfs on</title><link>https://ctlos.github.io/wiki/btrfs/</link><description>Recent content in Btrfs on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/wiki/btrfs/index.xml" rel="self" type="application/rss+xml"/><item><title>Btrfs установка и использование</title><link>https://ctlos.github.io/wiki/btrfs/btrfs-part1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/btrfs/btrfs-part1/</guid><description>Btrfs установка #
+Установите пакет пользовательских утилит.
+pacman -S btrfs-progs arch-install-scripts
+lsblk - подсветить все разделы чтобы определиться, что монтировать.
+# разбить диск, -z говорит обнулить таблицу разделов
+cfdisk -z /dev/sda
+Так как Btrfs не может содержать swap-файл, необходимо заранее позаботиться о разделе с подкачкой, если он вам нужен.
+mkswap /dev/sda2
+Создаём файловую систему на разделе. Для разделов от 1ГБ и меньше, чтобы более эффективно использовать пространство, рекомендуется передать ключ -M к параметрам mkfs.</description></item><item><title>Btrfs перенос, восстановление</title><link>https://ctlos.github.io/wiki/btrfs/btrfs-part2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/btrfs/btrfs-part2/</guid><description>Перенос на раздел #
+pacman -S rsync btrfs-progs arch-install-scripts
+lsblk - подсветить все разделы что бы определиться что монтировать.
 При необходимости разбить диск, флаг -z обнулить таблицу разделов.
-cfdisk -z /dev/sda Монтируем.
-mount /dev/sda6 /mnt Создадим три подтома root, домашний каталог пользователя и подтом для хранения.
-btrfs subvolume create /mnt/@_root btrfs subvolume create /mnt/@_home btrfs subvolume create /mnt/@_snapshots btrfs subvolume list /mnt Для переноса смонтируйте резервную систему и перенесите ее.</description></item></channel></rss>
+cfdisk -z /dev/sda
+Монтируем.
+mount /dev/sda6 /mnt
+Создадим три подтома root, домашний каталог пользователя и подтом для хранения.
+btrfs subvolume create /mnt/@_root
+btrfs subvolume create /mnt/@_home
+btrfs subvolume create /mnt/@_snapshots
+btrfs subvolume list /mnt
+Для переноса смонтируйте резервную систему и перенесите ее.</description></item></channel></rss>
