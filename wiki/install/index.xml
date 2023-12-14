@@ -1,68 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Начало on</title><link>https://ctlos.github.io/wiki/install/</link><description>Recent content in Начало on</description><generator>Hugo -- gohugo.io</generator><language>ru-RU</language><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://ctlos.github.io/wiki/install/index.xml" rel="self" type="application/rss+xml"/><item><title>Установка Ctlos Linux</title><link>https://ctlos.github.io/wiki/install/install-ctlos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/install-ctlos/</guid><description>Перед установкой online обязательно настройте интернет и выполните в терминале команду mirrors, а затем запустите установщик online. Команда просто перестроит список зеркал и обновит базы pacman, что предоставит наилучшую скорость установки для вас.
 Если установка online вылетает с ошибкой stemd-machine-id-setup error 127, то закройте установщик, откройте терминал, выполните как писал выше mirrors и затем обновите пакет yay -Syy archlinux-keyring. После этого запускайте установку online.
-Запись ISO #
-Для записи образа на USB накопитель потребуется установочный ISO образ, который можно скачать по ссылке Скачать Ctlos Linux.</description></item><item><title>Рекомендации после установки</title><link>https://ctlos.github.io/wiki/install/next-install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/next-install/</guid><description>Всегда помните о существовании Arch Wiki, большинство ответов уже существует, не ленитесь читать. Более актуальная информация на англ. языке.
-Обновление ключей #
-Если возникли проблемы с обновлением, или установкой пакетов выполните данные рекомендации.
-sudo pacman-key --init &amp;amp;&amp;amp; sudo pacman-key --populate &amp;amp;&amp;amp; sudo pacman-key --refresh-keys &amp;amp;&amp;amp; sudo pacman -Syy
-Если ошибка с содержанием hkps.pool.sks-keyservers.net, не может достучаться до сервера ключей выполните команды ниже. Указываем другой сервер ключей.</description></item><item><title>Пакетные менеджеры</title><link>https://ctlos.github.io/wiki/install/pkg-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/pkg-manager/</guid><description>Список некоторых программ Arch Wiki List applications.
+Запись ISO # Для записи образа на USB накопитель потребуется установочный ISO образ, который можно скачать по ссылке Скачать Ctlos Linux.</description></item><item><title>Рекомендации после установки</title><link>https://ctlos.github.io/wiki/install/next-install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/next-install/</guid><description>Всегда помните о существовании Arch Wiki, большинство ответов уже существует, не ленитесь читать. Более актуальная информация на англ. языке.
+Обновление ключей # Если возникли проблемы с обновлением, или установкой пакетов выполните данные рекомендации.
+sudo pacman-key --init &amp;amp;&amp;amp; sudo pacman-key --populate &amp;amp;&amp;amp; sudo pacman-key --refresh-keys &amp;amp;&amp;amp; sudo pacman -Syy Если ошибка с содержанием hkps.pool.sks-keyservers.net, не может достучаться до сервера ключей выполните команды ниже. Указываем другой сервер ключей.</description></item><item><title>Пакетные менеджеры</title><link>https://ctlos.github.io/wiki/install/pkg-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/pkg-manager/</guid><description>Список некоторых программ Arch Wiki List applications.
 В Arch принято использовать консольные пакетные менеджеры. Pacman главный и установлен по умолчанию, но существуют и графические менеджеры.
 Для Aur репозитория существует множество консольных пакетных менеджеров, я на текущий момент использую yay и он установлен во всех моих образах. Он берет на себя роль управления не только aur пакетами, но и pacman. У него те же флаги и немного своих https://github.com/Jguer/yay.
-Pamac manager #
-Установка.</description></item><item><title>Установка и настройка репозиториев ctlos</title><link>https://ctlos.github.io/wiki/install/ctlos-repo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/ctlos-repo/</guid><description>Добавление ключа 1 #
-Удалить все упомянания ctlos_repo из /etc/pacman.conf.
-sudo nano /etc/pacman.conf
-[ctlos_repo]
-Server = https://github.com/ctlos/$repo/raw/master/$arch
-...
-Установка #
-Скачать и запустить скрипт. Автоматически установит запись в /etc/pacman.conf. Установит необходимые ключи. curl -LO git.io/strap.sh
-sudo sh strap.sh
-Добавление ключа 2 #
-Данный способ немного сложнее.
-# инициализация gpg
-pacman-key --init
-pacman -Sy wget &amp;amp;&amp;amp; wget git.io/ctlos.gpg
-pacman-key --add ctlos.gpg
-# или с key сервера
-pacman-key --recv-keys 98F76D97B786E6A3
-Проверить отпечаток #
-pacman-key --finger 98F76D97B786E6A3
-Подписываем ключ #
-pacman-key --lsign-key 98F76D97B786E6A3
-# список
-pacman-key --list-keys
-Обновляем ключи #
-pacman-key --populate
-# up key server
-pacman-key --refresh-keys
-Устанавливаем зеркала #
-nano /etc/pacman.</description></item><item><title>Решение проблем</title><link>https://ctlos.github.io/wiki/install/trouble/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/trouble/</guid><description>Некоторые решенные проблемы описаны на форуме forum.ctlos.ru. Нашли проблему, или есть идеи, как что-то улучшить, создайте тему на форуме(ссылка выше), либо запрос на github.
-Grub #
-Как добавить в загрузчик grub другие os?
-sudo pacman -S os-prober
-sudo sed -i '/GRUB_DISABLE_OS_PROBER/s/^#//g' /etc/default/grub
-# или раскомментить строку GRUB_DISABLE_OS_PROBER
-sudo nano /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-Grub efi.
-Сброс root пароля #
-Reset_root_password.
-Thunar #
-Генерация пунктов в левом меню.</description></item><item><title>Рекомендации</title><link>https://ctlos.github.io/wiki/install/recomend/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/recomend/</guid><description>Linux-zen #
-Установка другого ядра, Kernels.
+Pamac manager # Установка.</description></item><item><title>Установка и настройка репозиториев ctlos</title><link>https://ctlos.github.io/wiki/install/ctlos-repo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/ctlos-repo/</guid><description>Добавление ключа 1 # Удалить все упомянания ctlos_repo из /etc/pacman.conf.
+sudo nano /etc/pacman.conf [ctlos_repo] Server = https://github.com/ctlos/$repo/raw/master/$arch ... Установка # Скачать и запустить скрипт. Автоматически установит запись в /etc/pacman.conf. Установит необходимые ключи. curl -LO git.io/strap.sh sudo sh strap.sh Добавление ключа 2 # Данный способ немного сложнее.
+# инициализация gpg pacman-key --init pacman -Sy wget &amp;amp;&amp;amp; wget git.io/ctlos.gpg pacman-key --add ctlos.gpg # или с key сервера pacman-key --recv-keys 98F76D97B786E6A3 Проверить отпечаток # pacman-key --finger 98F76D97B786E6A3 Подписываем ключ # pacman-key --lsign-key 98F76D97B786E6A3 # список pacman-key --list-keys Обновляем ключи # pacman-key --populate # up key server pacman-key --refresh-keys Устанавливаем зеркала # nano /etc/pacman.</description></item><item><title>Решение проблем</title><link>https://ctlos.github.io/wiki/install/trouble/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/trouble/</guid><description>Некоторые решенные проблемы описаны на форуме forum.ctlos.ru. Нашли проблему, или есть идеи, как что-то улучшить, создайте тему на форуме(ссылка выше), либо запрос на github.
+Grub # Как добавить в загрузчик grub другие os?
+sudo pacman -S os-prober sudo sed -i '/GRUB_DISABLE_OS_PROBER/s/^#//g' /etc/default/grub # или раскомментить строку GRUB_DISABLE_OS_PROBER sudo nano /etc/default/grub sudo grub-mkconfig -o /boot/grub/grub.cfg Grub efi.
+Сброс root пароля # Reset_root_password.
+Thunar # Генерация пунктов в левом меню.</description></item><item><title>Рекомендации</title><link>https://ctlos.github.io/wiki/install/recomend/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/install/recomend/</guid><description>Linux-zen # Установка другого ядра, Kernels.
 Если у вас карта nvidia, то драйвер нужно заменить.
-sudo pacman -S linux-zen linux-zen-headers
-sudo mkinitcpio -p linux-zen
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-Журнал systemd #
-Уменьшение размера журнала логов Systemd.
-sudo nano /etc/systemd/journald.conf
-Раскомментировать и изменить строку.
-SystemMaxUse=50M
-Перезапустите сервис.
-sudo systemctl restart systemd-journald.service
-Disable man-db #
-Отключаем переодическое увеличение загрузки из-за man-db.service.
-sudo systemctl disable man-db.service
-sudo systemctl disable man-db.</description></item></channel></rss>
+sudo pacman -S linux-zen linux-zen-headers sudo mkinitcpio -p linux-zen sudo grub-mkconfig -o /boot/grub/grub.cfg Журнал systemd # Уменьшение размера журнала логов Systemd.
+sudo nano /etc/systemd/journald.conf Раскомментировать и изменить строку.
+SystemMaxUse=50M Перезапустите сервис.
+sudo systemctl restart systemd-journald.service Disable man-db # Отключаем переодическое увеличение загрузки из-за man-db.service.
+sudo systemctl disable man-db.service sudo systemctl disable man-db.</description></item></channel></rss>
