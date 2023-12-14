@@ -12,4 +12,4 @@ comments: true
 
 ## Исходники
 
-- [v2.4.0-xfce](https://github.com/ctlos/ctlosiso/tree/v2.4.0-xfce).
+- [github.com/ctlos/ctlosiso](https://github.com/ctlos/ctlosiso).
