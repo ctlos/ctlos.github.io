@@ -15,6 +15,9 @@ jobs:
         os: [ubuntu-latest]
         node: [18.x, 20.x]
 
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
     - name: Checkout project
       uses: actions/checkout@v3
