@@ -26,6 +26,7 @@ HGBekoituotHvFTXp8UN2Mfcvp5yyxSAfVz5zSg87FQ4
 ```
 
 - Ю.Мани: `410011749909586`
+- [boosty.to](https://boosty.to/cvc)
 - [Donationalerts](http://www.donationalerts.ru/c/creio)
 
 <!--
