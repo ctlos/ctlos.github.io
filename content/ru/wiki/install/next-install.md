@@ -14,7 +14,9 @@ weight: 20
 Если возникли проблемы с обновлением, или установкой пакетов выполните данные рекомендации.
 
 ```bash
-sudo pacman-key --init && sudo pacman-key --populate && sudo pacman-key --refresh-keys && sudo pacman -Syy
+sudo pacman -Syy archlinux-keyring
+
+sudo pacman-key --init && sudo pacman-key --populate && sudo pacman-key --refresh-keys
 ```
 
 > Если ошибка с содержанием `hkps.pool.sks-keyservers.net`, не может достучаться до сервера ключей выполните команды ниже. Указываем другой сервер ключей.
@@ -25,11 +27,11 @@ sudo pacman-key --init && sudo pacman-key --populate && sudo pacman-key --refres
 ```
 
 ```bash
+sudo pacman -Syy archlinux-keyring
+
 sudo pacman-key --init && sudo pacman-key --populate
 
 sudo pacman-key --refresh-keys --keyserver keys.gnupg.net
-
-sudo pacman -Syy
 ```
 
 > Если ошибка с содержанием `/var/lib/pacman/sync`, выполните команду ниже и повторите пункт с обновлением ключей.
