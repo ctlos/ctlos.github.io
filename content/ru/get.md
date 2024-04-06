@@ -5,7 +5,8 @@ description: Актуальные релизы для скачивания вс�
 
 Только для x86-64(64-bit) архитектуры процессора.
 
-![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg?logo=github)
+![Download Ctlos Linux](https://img.shields.io/sourceforge/dt/ctlos.svg?logo=sourceforge)
 
 > Актуальные ссылки для скачивания Ctlos всегда представлены на данной странице.
 
