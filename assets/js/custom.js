@@ -1,7 +1,9 @@
 // widget
+/*eslint-disable no-unused-vars*/
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+/*eslint-enable no-unused-vars*/
 (function(){
-	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];
 	s1.async=true;
 	s1.src='https://embed.tawk.to/647f954f94cf5d49dc5c312a/1hqq1k4gs';
 	s1.charset='UTF-8';
