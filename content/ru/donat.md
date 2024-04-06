@@ -41,7 +41,8 @@ HGBekoituotHvFTXp8UN2Mfcvp5yyxSAfVz5zSg87FQ4
 
 Вы также можете поддержать проект, используя одну из реферальных ссылок ниже. Win-win.
 
+- Недорогие сервера [netangels.ru](https://netangels.ru/?p_ref=u112835).
+- VPS, хостинг [timeweb](https://timeweb.com/ru/?i=107375).
 - [Digital Ocean](https://m.do.co/c/49c4dbf3d0ca), бонус 100$ на 2 месяца.
 - [Vultr](https://www.vultr.com/?ref=8527669-6G), бонус 100$.
 - [REG.RU](https://www.reg.ru/), промокод: **8A39-8FCA-CDB4-F765** на скидку 5%.
-- [Fozzy](https://fozzy.com/aff.php?aff=17247&page=domains), промокод: **CTLOS** на скидку 10%.
