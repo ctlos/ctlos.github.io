@@ -14,11 +14,12 @@ description: Актуальные релизы для скачивания вс�
 
 ## Зеркала для скачивания
 
-- [google drive](https://drive.google.com/drive/folders/1yqHmb7V3UKrplWgMHj1Meq1mJou2Cz1u)
+- [sourceforge](https://sourceforge.net/projects/ctlos/files/)
+<!-- - [google drive](https://drive.google.com/drive/folders/1yqHmb7V3UKrplWgMHj1Meq1mJou2Cz1u) -->
 <!-- - [OSDN releases](https://osdn.net/projects/ctlos/releases/) -->
 <!-- - [Github releases](https://github.com/ctlos/ctlosiso/releases) -->
 <!-- - [cloud.ctlos.ru](https://cloud.ctlos.ru) -->
-<!-- - [ipfs](https://ipfs.ctlos.ru) -->
+- [ipfs](https://cloudflare-ipfs.com/ipns/ipfs.ctlos.ru/)
 <!-- - [ctlos-ipfs](https://ctlos-ipfs.fission.app/iso) -->
 
 > [Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).

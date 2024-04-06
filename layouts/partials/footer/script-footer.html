@@ -57,6 +57,9 @@
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
 
+{{ $custom := resources.Get "js/custom.js" -}}
+{{ $slice = $slice | append $custom -}}
+
 {{ $js := $slice | resources.Concat "main.js" -}}
 
 {{ if eq (hugo.Environment) "development" -}}
