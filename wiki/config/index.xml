@@ -11,4 +11,6 @@ mount /dev/sda2 /mnt Создаем efi дерикторию и др., если 
 mkdir -p /mnt/boot/efi Монтируем boot EFI.
 mount /dev/sda1 /mnt/boot/efi Установка # Выполняем chroot.
 arch-chroot /mnt Установим Grub.
-pacman -S grub efibootmgr dosfstools os-prober Установим grub в /boot/efi.</description></item></channel></rss>
+pacman -S grub efibootmgr dosfstools os-prober Установим grub в /boot/efi.</description></item><item><title>Stow</title><link>https://ctlos.github.io/wiki/config/stow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ctlos.github.io/wiki/config/stow/</guid><description>Stow # GNU Stow — это менеджер символьных ссылок. Он позволяет управлять файлами конфигурации и установкой программ из исходников. При помощи Stow можно устанавливать программы из исходных кодов в обход менеджера пакетов, не боясь сломать систему. Также им удобно управлять файлами конфигурации (далее дот-файлами) в домашнем каталоге пользователя.
+Управление дот-файлами # Пример - конфиг alacritty. Хранить все наши конфиги будем в $HOME/dotfiles/
+alacritty.toml должен находиться в $HOME/dotfiles/alacritty/.config/alacritty/, в ~/.config/ не должно быть папки alacritty.</description></item></channel></rss>
