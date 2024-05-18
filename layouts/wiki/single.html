@@ -51,11 +51,11 @@
 				<div class="my-n3"></div>
 			{{ end -}}
 
-      {{ if eq (hugo.Environment) "production" -}}
+      {{/* if eq (hugo.Environment) "production" -}}
         {{ if ne .Params.comments false -}}
           {{ partial "main/discourse.html" . }}
         {{ end -}}
-      {{ end }}
+      {{ end */}}
 
 		</main>
 	</div>

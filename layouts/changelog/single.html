@@ -9,11 +9,11 @@
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
     </article>
-    {{ if eq (hugo.Environment) "production" -}}
+    {{/* if eq (hugo.Environment) "production" -}}
       {{ if ne .Params.comments false -}}
         {{ partial "main/discourse.html" . }}
       {{ end -}}
-    {{ end }}
+    {{ end */}}
   </div>
 </div>
 {{ end }}
