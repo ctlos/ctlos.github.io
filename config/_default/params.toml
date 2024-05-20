@@ -56,9 +56,9 @@ footer = "Gen: <a target=\"_blank\" rel=\"noopener\" href=\"https://gohugo.io\">
 copyRight = "Copyright (c) Ctlos Linux"
 
 # Alert
-alert = false
+alert = true
 alertDismissable = true
-alertText = "Курс: Администратор Linux <a target=\"_blank\" rel=\"noopener\" class=\"alert-link stretched-link\" href=\"https://go.acstat.com/dd8dd6e6d0d585c0\">Подробнее</a>"
+alertText = "Топовый p2p обенник крипты BitPapa <a target=\"_blank\" rel=\"noopener\" class=\"alert-link stretched-link\" href=\"https://bitpapa.com/?ref=YWE3NTVlYm\">Подробнее</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab]

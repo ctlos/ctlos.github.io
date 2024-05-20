@@ -46,3 +46,13 @@ sudo systemctl restart systemd-journald.service
 sudo systemctl disable man-db.service
 sudo systemctl disable man-db.timer
 ```
+
+## Отключить отладку в AUR
+
+Если вы установите пакет из aur, вы получите пакет отладки с целевым пакетом, добавьте '!' в строке `OPTIONS` перед `debug` в `/etc/makepkg.conf`.
+
+```bash
+sudo nano /etc/makepkg.conf
+
+OPTIONS=(strip docs !libtool !staticlibs emptydirs zipman purge !debug lto)
+```
