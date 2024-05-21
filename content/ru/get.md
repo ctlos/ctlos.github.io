@@ -20,7 +20,7 @@ description: Актуальные релизы для скачивания вс�
 <!-- - [OSDN releases](https://osdn.net/projects/ctlos/releases/) -->
 <!-- - [Github releases](https://github.com/ctlos/ctlosiso/releases) -->
 <!-- - [cloud.ctlos.ru](https://cloud.ctlos.ru) -->
-- [ipfs](https://cloudflare-ipfs.com/ipns/ipfs.ctlos.ru/)
+- [ipfs](https://ipfs.io/ipns/ipfs.ctlos.ru/)
 <!-- - [ctlos-ipfs](https://ctlos-ipfs.fission.app/iso) -->
 
 > [Поддержи рублем](/donat) и пройди [небольшой опрос](https://forms.gle/qzAUa6R4fShf3xSw7).
