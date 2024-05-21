@@ -100,6 +100,9 @@ body.docs {
 a:hover,
 a:focus {
   text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.1ex;
+  text-underline-offset: 4px;
 }
 
 a.btn:hover,
