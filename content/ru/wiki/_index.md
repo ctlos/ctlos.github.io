@@ -33,6 +33,7 @@ Ctlos Linux — базируется на Arch Linux, iso образ собра�
 
 ## Статьи о Ctlos
 
+- [Карманный Arch. Делаем флешку с живым образом Arch Linux](https://xakep.ru/2024/05/24/portable-arch/)
 - [Русский Arch Linux](https://telegra.ph/Russkij-Arch-Linux-01-18)
 - [Русский Arch Linux: интервью с создателем CtlOS](https://vc.ru/dev/163811-russkiy-arch-linux-intervyu-s-sozdatelem-ctlos)
 
