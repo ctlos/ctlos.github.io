@@ -127,3 +127,9 @@ EndSection
 ```bash
 sudo pacman -S xf86-video-vesa
 ```
+
+## Если лагает на старых GPU
+
+```bash
+sudo pacman -S mesa-amber
+```
