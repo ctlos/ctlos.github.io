@@ -16,7 +16,7 @@ Ctlos Linux создаётся и поддерживается на добров
 bc1qs7m87zuykazshg7ps934twjcpzerz90tp208nj
 
 # TRON network
-TVYAFv4zqxxAfWNroMGVyubH3SUW56qdsm
+TNJ9yr7p6sTPTMvAJzSjhUujZ6nECuLnRQ
 
 # ETH/Polygon/BSC network
 0x06dFda93C05a755dE4dC97EE6D06557c87DefA38
