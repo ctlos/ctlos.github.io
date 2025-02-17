@@ -17,6 +17,7 @@ Ctlos Linux — базируется на Arch Linux, iso образ собра�
 Собиралась данная система изначально исключительно для себя. Стандартное ПО, как и в большинстве дистрибутивов Linux.
 
 [![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)](/get)
+[![Download Ctlos Linux](https://img.shields.io/sourceforge/dt/ctlos.svg?logo=sourceforge)](/get)
 
 - [Скачать Ctlos](/get)
 - [История изменений](/wiki/changelog)
