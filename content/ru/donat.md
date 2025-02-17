@@ -15,13 +15,16 @@ Ctlos Linux создаётся и поддерживается на добров
 # BTC
 bc1qs7m87zuykazshg7ps934twjcpzerz90tp208nj
 
-# TRON network
+# USDT TRON network
+TVYAFv4zqxxAfWNroMGVyubH3SUW56qdsm
+
+# USDT TON network
 TNJ9yr7p6sTPTMvAJzSjhUujZ6nECuLnRQ
 
-# ETH/Polygon/BSC network
+# USDT ETH/Polygon/BSC network
 0x06dFda93C05a755dE4dC97EE6D06557c87DefA38
 
-# SOL network
+# USDT SOL network
 HGBekoituotHvFTXp8UN2Mfcvp5yyxSAfVz5zSg87FQ4
 ```
 
