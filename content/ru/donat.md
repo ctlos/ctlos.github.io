@@ -19,7 +19,7 @@ bc1qs7m87zuykazshg7ps934twjcpzerz90tp208nj
 TVYAFv4zqxxAfWNroMGVyubH3SUW56qdsm
 
 # USDT TON network
-TNJ9yr7p6sTPTMvAJzSjhUujZ6nECuLnRQ
+UQDyXko7pVb9IFpTlErlc7n_5QSHvMRyxM6fe9uMgYhOVrOE
 
 # USDT ETH/Polygon/BSC network
 0x06dFda93C05a755dE4dC97EE6D06557c87DefA38
