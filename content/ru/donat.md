@@ -7,7 +7,7 @@ Ctlos Linux создаётся и поддерживается на добров
 
 > **Вы можете помочь** развитию проекта и сообщества, пожертвовав небольшую сумму денег, чтобы покрыть некоторые расходы, предоставив разработчикам время и свободу для улучшения функций.
 
-Спасибо! Ваша поддержка очень важна.
+Помогите оставаться в тонусе и не засыпать на клавиатуре. Ваш донат — это как `Ctrl + Alt + Del` для продуктивности!
 
 ### Crypto
 
@@ -44,8 +44,11 @@ HGBekoituotHvFTXp8UN2Mfcvp5yyxSAfVz5zSg87FQ4
 
 Вы также можете поддержать проект, используя одну из реферальных ссылок ниже. Win-win.
 
-- Недорогие сервера [netangels.ru](https://netangels.ru/?p_ref=u112835).
-- VPS, хостинг [timeweb](https://timeweb.com/ru/?i=107375).
+- [IT курсы, обучение с трудоустройством.](https://go.redav.online/9f90710708b5a450?erid=LdtCKCxkP&m=1)
+- Топ провайдер серверов [https://pq.hosting](https://pq.hosting/?from=724778)
+- Недорогие сервера [https://netangels.ru](https://netangels.ru/?p_ref=u112835)
+- [REG.RU](https://www.reg.ru/), промокод: `8A39-8FCA-CDB4-F765` на скидку 5%.
+- [timeweb.cloud](https://timeweb.cloud/r/creio)
+- VPS, хостинг [timeweb.com](https://timeweb.com/ru/?i=107375)
 - [Digital Ocean](https://m.do.co/c/49c4dbf3d0ca), бонус 100$ на 2 месяца.
 - [Vultr](https://www.vultr.com/?ref=8527669-6G), бонус 100$.
-- [REG.RU](https://www.reg.ru/), промокод: **8A39-8FCA-CDB4-F765** на скидку 5%.
