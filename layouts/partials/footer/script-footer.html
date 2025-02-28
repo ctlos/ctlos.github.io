@@ -51,6 +51,12 @@
   {{ $slice = $slice | append $alert -}}
 {{ end -}}
 
+{{ if .Site.Params.options.toTopButton -}}
+  {{ $toTopButton := resources.Get "js/to-top.js" -}}
+  {{ $toTopButton := $toTopButton | js.Build -}}
+  {{ $slice = $slice | append $toTopButton -}}
+{{ end -}}
+
 {{ if .Site.Params.options.kaTex -}}
   {{ $katexConfig := resources.Get "js/katex.js" -}}
   {{ $katexConfig := $katexConfig | js.Build -}}
@@ -105,4 +111,5 @@
   {{ if and (.Site.Params.options.flexSearch) (eq .Section "wiki") -}}
     <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b252373f-d336-46f8-bdbc-044f2a80b52a"></script>
 {{ end -}}

@@ -50,7 +50,7 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Gen: <a target=\"_blank\" rel=\"noopener\" href=\"https://gohugo.io\">Hugo</a> | Fork: <a target=\"_blank\" rel=\"noopener\" href=\"https://getdoks.org\">Doks</a>"
+footer = "Gen: <a target=\"_blank\" rel=\"noopener\" href=\"https://gohugo.io\">Hugo</a> | Fork: <a target=\"_blank\" rel=\"noopener\" href=\"https://getdoks.org\">Doks</a> | <a target=\"_blank\" rel=\"noopener\" href=\"https://cloud.umami.is/share/RcIU3HKy0GgD00IU/ctlos.github.io\">Analytics</a>"
 
 # Feed
 copyRight = "Copyright (c) Ctlos Linux"
@@ -58,7 +58,7 @@ copyRight = "Copyright (c) Ctlos Linux"
 # Alert
 alert = true
 alertDismissable = true
-alertText = "<a target=\"_blank\" rel=\"noopener\" class=\"alert-link stretched-link fw-normal\" href=\"https://go.redav.online/9f90710708b5a450?erid=LdtCKCxkP&m=1\">IT курсы, обучение с трудоустройством.</a>"
+alertText = "<a target=\"_blank\" rel=\"noopener\" class=\"alert-link stretched-link fw-normal\" href=\"https://adv.ctlos.ru/go/b6ee6be37ad9ee40?erid=LdtCK4uVh\">IT курсы, обучение с трудоустройством.</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab]
@@ -80,3 +80,4 @@ editPage = true
   collapsibleSidebar = true
   multilingualMode = true
   wikiVersioning = false
+  toTopButton = true
