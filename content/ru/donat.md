@@ -39,7 +39,7 @@ HGBekoituotHvFTXp8UN2Mfcvp5yyxSAfVz5zSg87FQ4
 - [PayPal](https://www.paypal.com/donate/?hosted_button_id=SDL935XTMD72N)
 - [patreon.com](https://www.patreon.com/ctlos) -->
 
-<iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&default-sum=&button-text=11&payment-type-choice=on&mobile-payment-type-choice=on&mail=on&successURL=&quickpay=shop&account=410011749909586&targets=%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%20%D0%BF%D0%BE%20%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B5&" width="100%" height="260" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+<iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&default-sum=300&button-text=11&payment-type-choice=on&mobile-payment-type-choice=on&mail=on&successURL=&quickpay=shop&account=410011749909586&targets=%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%20%D0%BF%D0%BE%20%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B5&" width="100%" height="260" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 
 ## Реферальные ссылки
 
