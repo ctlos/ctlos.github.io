@@ -81,3 +81,9 @@ editPage = true
   multilingualMode = true
   wikiVersioning = false
   toTopButton = true
+
+[shareButtons]
+  networks = ["telegram", "vk", "facebook", "twitter", "email", "reddit"]
+  size = "small"
+  buttonMargin = "0.1em"
+  icon = "solid"

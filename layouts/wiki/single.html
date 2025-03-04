@@ -40,6 +40,7 @@
 			</nav>
 			{{ end -}}
 			{{ .Content }}
+      {{ partial "main/share-buttons.html" . }}
 			{{ if .Site.Params.editPage -}}
 				{{ partial "main/edit-page.html" . }}
 			{{ end -}}

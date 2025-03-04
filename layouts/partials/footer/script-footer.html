@@ -63,6 +63,11 @@
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
 
+{{ if ne (hugo.Environment) "development" -}}
+  {{ $tawk := resources.Get "js/tawk.js" -}}
+  {{ $slice = $slice | append $tawk -}}
+{{ end -}}
+
 {{ $custom := resources.Get "js/custom.js" -}}
 {{ $slice = $slice | append $custom -}}
 

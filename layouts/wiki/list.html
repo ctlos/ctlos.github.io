@@ -9,6 +9,7 @@
     <h1 class="">{{ .Title }}</h1>
     <p class="lead">{{ .Params.lead | safeHTML }}</p>
     <div class="">{{ .Content }}</div>
+    {{ partial "main/share-buttons.html" . }}
     {{ if .Site.Params.editPage -}}
       {{ if ne .Params.edit false -}}
         {{ partial "main/edit-page.html" . }}
