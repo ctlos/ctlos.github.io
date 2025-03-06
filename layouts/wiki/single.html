@@ -41,6 +41,7 @@
 			{{ end -}}
 			{{ .Content }}
       {{ if not .Params.disableShare -}}
+      <div>
         <a class="btn btn-primary my-2"
           data-bs-toggle="collapse" href="#collapseExample" role="button"
           aria-expanded="false" aria-controls="collapseExample"
@@ -50,6 +51,7 @@
         <div class="collapse" id="collapseExample">
           {{ partial "main/share-buttons.html" . }}
         </div>
+      </div>
       {{ end -}}
       {{/* if ne .Params.feedback false -}}
         {{ partial "main/feedback.html" . }}
