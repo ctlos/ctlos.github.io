@@ -1,0 +1,75 @@
+- name: Oleg
+  date: 25.01.2025
+  text: Крайне интересная авторская сборка arch linux. Со своими уникальными особенностями. Замечен большой вклад автора в создании и поддержке данной сборки.
+
+- name: Сергей М
+  date: 24.11.2024
+  draft: true
+  text: В качестве Desktop  версии для домашнего компьютера. Рад что нашел альтернативный дистрибутив для личного пользования, до этого пробовал Manjaro, Rosa, Mint, Solus, MX и другие, но этот понравился больше всех, Фактически доведен до ума как полноценный дистрибутив из коробки, чего так не хватало много лет, можно смело рекомендовать и устанавливать на домашние ПК вместо Windows, хотя может не как игровой, но для работы и развлечений вполне оптимален. Я как рядовой пользователь могу только, сказать что в сравнении с аналогичными российскими линукс дистрибутивами практически безупречен, шустрый удобный и что немаловажно -красивый :)))) Спасибо большое!
+
+- name: Александр
+  date: 09.04.2024
+  text: Многочисленные попытки использовать на своём 14-ти летнем Acer Extensa различных дистрибьютивов и желание перейти на BSPWM не привели к желаемому результату. Ctlos "зашёл" как своим наполнением, так и внешним видом. Решение всех проблем, связанных со своим железом, найдены в чате телеграмм. Благодарю.
+
+- name: AccGoo
+  date: 22.11.2023
+  text: Если не хочется тратить время на установку чистого Arch'а, то Ctlos - самое лучшее, что можно сделать
+
+- name: Andrew Roma
+  date: 12.04.2023
+  text: Я ПМ с бывшим опытом в разработке. Очень нравится bspwm версия ctlos, после небольшой доработки и подведения под себя - радует глаз и разум. Есть проблемы с некоторыми приложениями, например telegram не даёт связываться по видео (выбрасывает), но это уже мелочи решаемые на стороне разработчиков. Всем доволен, спасибо!
+
+- name: Reutoff
+  date: 12.02.2023
+  text: Удобно тем, что при установке обычного чистого арча не надо возиться со скриптами, только раздражает, что нужны танцы с бубном вокруг ключей. Кто первый раз будет устанавливать, поймет, что через это придется пройти. А так, в целом, все уже собрано, аур по умолчанию, zsh, приятная программерская тема оформления интерфейса системы. Если все это самому делать, много понадобится времени на настройку, а тут тебе все сразу разжевали и в рот положили.
+
+- name: Павел
+  date: 22.12.2022
+  draft: true
+  text: Очень ламповый и классный "домашний" дистрибутив, радует буквально все, от цветов и обоев до реализации терминала, и блокировщика экрана. Приятно удивлен качеством прделанной работы (я говорю про окружение xfce). Дистро очень зашел, поставлю матери на ноут вместо опостылевшей винды, и буду рекомендовать всем друзьям. (к слову они действительно интересуются что это за ОС, так как выглядит она лучше винды)
+
+- name: Александр
+  date: 21.10.2022
+  text: Для начинающих - отличный вариант Арча. Я уже давно на чистом арче, но время от времени посматриваю и слежу за вашим дистром. Желаю успехов и процветания!
+
+- name: Vic
+  date: 10.09.2022
+  text: Люблю очень этот дистр, ультра удобный, очень быстрый и не загруженный лишним. Благодарю Автора за Грамотно Слаженную Систему)
+
+- name: Игорь
+  date: 18.07.2022
+  draft: true
+  text: Я всегда искал дистрибутив, который основан на арче и максимально приближен к пользователю, данный дистрибутив меня очень обрадовал наличием calamares и pamac, я без труда поставил его на свой домашний моноблок. Конечно для максимального удобства мне пришлось установить pamac-nosnap, но это уже мелочи. Огромное спасибо автору за его труд!
+
+- name: e42fh
+  date: 02.02.2022
+  text: Very good distributiv, small size and very fast!
+
+- name: Евгений
+  date: 11.11.2021
+  text: Использую в повседневной работе и на домашнем ноуте. До этого тупо сидел на Дебиане (Алекса). Благодарю Автора за его сборку. Первое знакомство с Сtlos было на Рутреккере. Все продумано и вылизано до мелочей. Желаю успехов в нелегком труде. Арч он и в Африке Арч.
+
+- name: Lucas Bezerra Sousa
+  date: 05.08.2021
+  text: Opa, sou do Brasil uso o CtlosLinux há uns 6 ou 7 meses e até agora tem sido uma experiencia incrível. Gostaria que tivesse uma suporte maior ao meu idioma (Português Br) e ao inglês, pq sinto q algumas interfaces não estão devidamente traduzidas, mas mesmo assim tem sido uma experiencia muito agradável em todo esse tempo d uso. Gradeço a atenção desde já. :D
+
+- name: Benzoid
+  date: 31.07.2021
+  text: Очень хорошая система! Для меня это-то, что нужно! Быстро и легко устанавливается,  хорошо настраивается, нет ничего лишнего. Для моих целей подходит идеально.
+
+- name: sergey
+  date: 13.07.2021
+  text: Ctlos-великолепное решение для пользователей всех уровней,продолжайте развивать данный проект,в целях популяризации Ctlos буду рекомендовать к использованию всем друзьям и знакомым.
+
+- name: DM Braun
+  date: 21.03.2021
+  draft: true
+  text: CTLOS has in the past provided a working environment that is, Fully-functional out-of-the-box, configured to bypass typical Archlinux annoyances and issues, fit with an exceptional UI/UX - which is easy to work with for many hours in a row without straining eyes, and is also serious and professional enough that it doesn't feel childish (one can screencast for work without shame) - has a well-maintained repository supporting several working environments (I keep a DE handy in case I have to show somebody something and they are not used to tiling WM) and comes equipped with the perfect selection of tools and libraries required for my work in audit and automation etc. I often switch PCs as I trade/buy/sell/repair hardware on the side. Sometimes I am working with 3 laptops, sometimes 2 desktops, headless server and a laptop, etc. and always with remote systems. CTLOS allows me to boot into a live environment for quick scripting and install to disk in a couple of minutes, knowing that I am entering a stable environment that I am familiar with and that behaves as intended. As a bonus, I like how it looks - especially the frankenwm configuration which is very nicely put together and not often encountered.
+
+- name: Андрей
+  date: 21.02.2021
+  text: Не углубляюсь сильно в "дебри" программирования и тонких настроек. Для моих рабочих задач и праздного времяпрепровождения ctlos более чем достаточен. Радует продуманный, "цельный" внешний вид и возможности.
+
+- name: Алексей Рассказов
+  date: 21.01.2021
+  text: В установщике ctlos можно заранее установить нужный софт, и ещё автор хорошо поработал над оформлением(вроде я где-то это видел но мне это нравится)

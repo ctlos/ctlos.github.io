@@ -40,7 +40,20 @@
 			</nav>
 			{{ end -}}
 			{{ .Content }}
-      {{ partial "main/share-buttons.html" . }}
+      {{ if not .Params.disableShare -}}
+        <a class="btn btn-primary my-2"
+          data-bs-toggle="collapse" href="#collapseExample" role="button"
+          aria-expanded="false" aria-controls="collapseExample"
+        >
+          Поделиться
+        </a>
+        <div class="collapse" id="collapseExample">
+          {{ partial "main/share-buttons.html" . }}
+        </div>
+      {{ end -}}
+      {{/* if ne .Params.feedback false -}}
+        {{ partial "main/feedback.html" . }}
+      {{ end -*/}}
 			{{ if .Site.Params.editPage -}}
 				{{ partial "main/edit-page.html" . }}
 			{{ end -}}

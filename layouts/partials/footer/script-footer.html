@@ -35,7 +35,7 @@
 {{ end -}}
 
 {{ if .Site.Params.options.flexSearch -}}
-  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
+  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.min.js" -}}
   {{ $slice = $slice | append $flexSearch -}}
 {{ end -}}
 
@@ -62,6 +62,12 @@
   {{ $katexConfig := $katexConfig | js.Build -}}
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
+
+{{ $jquery := resources.Get "js/vendor/jquery/jquery.slim.js" -}}
+{{ $slice = $slice | append $jquery -}}
+
+{{ $slick := resources.Get "js/vendor/slick/slick.js" -}}
+{{ $slice = $slice | append $slick -}}
 
 {{ if ne (hugo.Environment) "development" -}}
   {{ $tawk := resources.Get "js/tawk.js" -}}

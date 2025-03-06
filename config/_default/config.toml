@@ -83,6 +83,12 @@ rel  = "sitemap"
     source = "node_modules/flexsearch"
     target = "assets/js/vendor/flexsearch"
   [[module.mounts]]
+    source = "node_modules/jquery/dist"
+    target = "assets/js/vendor/jquery"
+  [[module.mounts]]
+    source = "node_modules/slick-carousel/slick"
+    target = "assets/js/vendor/slick"
+  [[module.mounts]]
     source = "node_modules/katex"
     target = "assets/js/vendor/katex"
   [[module.mounts]]
