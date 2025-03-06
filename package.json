@@ -22,6 +22,7 @@
     "clean:install": "shx rm -rf package-lock.json node_modules ",
     "lint": "npm run -s lint:js && npm run -s lint:css && npm run -s lint:md",
     "lint:js": "eslint assets/js config functions",
+    "lint:js-fix": "eslint --fix assets/js",
     "lint:css": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:md": "markdownlint \"*.md\" \"content/**/*.md\"",
     "server": "exec-bin node_modules/.bin/hugo/hugo server",
@@ -63,7 +64,5 @@
   },
   "otherDependencies": {
     "hugo": "0.88.1"
-  },
-  "dependencies": {
   }
 }

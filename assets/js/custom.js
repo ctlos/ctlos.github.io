@@ -13,21 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoint: 1399,
         settings: {
           slidesToShow: 3,
-        }
+        },
       },
       {
         breakpoint: 1199,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
-        }
+        },
       },
-    ]
+    ],
   });
 
 });
