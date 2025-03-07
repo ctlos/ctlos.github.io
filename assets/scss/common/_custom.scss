@@ -16,11 +16,13 @@
   transform: none !important;
 }
 
-.slider-reviews .slick-slide {
-  margin-right: 15px;
-}
+.slider-reviews {
+  .slick-slide {
+    margin-right: 15px;
+  }
 
-.slider-reviews .card-body {
-  margin: 1.5rem;
-  padding: 0;
+  .card-body {
+    margin: 1.5rem;
+    padding: 0;
+  }
 }

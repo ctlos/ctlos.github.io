@@ -20,6 +20,8 @@ module.exports = {
         'td',
         'h5',
         'alert-link',
+        'slick-slide',
+        'slick-dots',
         ...whitelister([
           './assets/scss/components/_buttons.scss',
           './assets/scss/components/_code.scss',
