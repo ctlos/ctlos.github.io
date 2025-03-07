@@ -1,0 +1,25 @@
+name: Notify Telegram
+
+on:
+  # discussion:
+  #   types: [created, edited, answered]
+  discussion_comment:
+    types: [created]
+
+jobs:
+  tg_alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Telegram Notification
+        uses: cbrgm/telegram-github-action@v1
+        with:
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          disable-web-page-preview: true
+          message: |
+            🚀 New Discussion Comment!
+            Title: ${{ github.event.discussion.title }}
+            Comment URL: [ссылка](${{ github.event.comment.html_url }})
+            Author: ${{ github.event.comment.user.login }}
+            Body:
+            ${{ github.event.comment.body }}
