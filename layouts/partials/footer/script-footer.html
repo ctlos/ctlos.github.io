@@ -79,6 +79,25 @@
 
 {{ $js := $slice | resources.Concat "main.js" -}}
 
+{{ if and (eq (default .Type .Section) "wiki") (eq .Kind "page") (ne .Params.comments false) (ne .Site.Params.options.comments false) -}}
+<script src="https://giscus.app/client.js"
+  data-repo="ctlos/ctlos.github.io"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzU2ODYyMDc="
+  data-category="Wiki comments"
+  data-category-id="DIC_kwDOFAIqP84Cnp0b"
+  data-mapping="title"
+  data-strict="1"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="catppuccin_mocha"
+  data-lang="ru"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+{{ end -}}
+
 {{ if eq (hugo.Environment) "development" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.RelPermalink }}" defer></script>

@@ -67,6 +67,10 @@
 				<div class="my-n3"></div>
 			{{ end -}}
 
+      {{ if and (ne .Params.comments false) (ne .Site.Params.options.comments false) -}}
+        <div class="giscus mt-5"></div>
+      {{ end -}}
+
       {{/* if eq (hugo.Environment) "production" -}}
         {{ if ne .Params.comments false -}}
           {{ partial "main/discourse.html" . }}
