@@ -1,28 +1,3 @@
 .fixed-bottom {
   bottom: 10%;
 }
-
-.slick-prev::before,
-.slick-next::before {
-  color: $color-btn-bg;
-}
-
-.slick-dots li button::before,
-.slick-dots li.slick-active button::before {
-  color: $color-btn-bg;
-}
-
-.card-reviews:hover {
-  transform: none !important;
-}
-
-.slider-reviews {
-  .slick-slide {
-    margin-right: 15px;
-  }
-
-  .card-body {
-    margin: 1.5rem;
-    padding: 0;
-  }
-}
