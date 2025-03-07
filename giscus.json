@@ -1,0 +1,10 @@
+{
+  "origins": [
+    "https://ctlos.github.io",
+    "https://wiki.ctlos.ru"
+  ],
+  "originsRegex": [
+    "http://localhost:[0-9]+"
+  ],
+  "defaultCommentOrder": "newest"
+}
