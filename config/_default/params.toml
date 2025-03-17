@@ -58,7 +58,7 @@ copyRight = "Copyright (c) Ctlos Linux"
 # Alert
 alert = true
 alertDismissable = true
-alertText = "<a target=\"_blank\" rel=\"nofollow noopener noreferrer\" class=\"alert-link stretched-link fw-normal\" href=\"https://adv.ctlos.ru/go/b6ee6be37ad9ee40?erid=LdtCK4uVh\">IT курсы, обучение с трудоустройством.</a>"
+alertText = "<a target=\"_blank\" rel=\"nofollow noopener noreferrer\" class=\"alert-link stretched-link fw-normal\" href=\"https://adv.ctlos.ru/go/84432b120fc66db0?erid=LdtCK6FVq\">Топовые IT курсы с трудоустройством.</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab]
