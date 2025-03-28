@@ -9,6 +9,9 @@
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
     </article>
+    {{ if ne .Params.subscribe false -}}
+      {{ partial "main/kit.html" . }}
+    {{ end -}}
   </div>
 </div>
 {{ end }}

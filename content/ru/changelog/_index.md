@@ -11,6 +11,7 @@ images: []
 - Группа в VK: [vk.com/ctlos](https://vk.com/ctlos)
 - Telegram канал: [t.me/ctlos_info](https://telegram.me/ctlos_info)
 - Подпишись на: [RSS](https://ctlos.github.io/changelog/index.xml)
+- Email подписка: [kit.ctlos.ru/subscribe](https://kit.ctlos.ru/subscribe?utm_source=ctlos)
 
 > Последние и наиболее актуальные версии представлены на странице загрузки [ctlos.github.io/get](/get).
 

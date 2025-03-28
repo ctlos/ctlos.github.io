@@ -13,6 +13,9 @@
       <div class="my-2 text-secondary">Поделиться:</div>
       {{ partial "main/share-buttons.html" . }}
     {{ end -}}
+    {{ if ne .Params.subscribe false -}}
+      {{ partial "main/kit.html" . }}
+    {{ end -}}
     {{ if .Site.Params.editPage -}}
       {{ if ne .Params.edit false -}}
         {{ partial "main/edit-page.html" . }}
