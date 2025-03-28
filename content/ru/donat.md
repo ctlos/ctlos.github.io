@@ -10,7 +10,7 @@ Ctlos Linux создаётся и поддерживается на добров
 
 Помогите оставаться в тонусе и не засыпать на клавиатуре. Ваш донат — это как `Ctrl + Alt + Del` для продуктивности!
 
-- Boosty: https://boosty.to/cvc
+- Boosty: [boosty.to/cvc](https://boosty.to/cvc)
 
 ### Crypto
 
