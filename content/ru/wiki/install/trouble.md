@@ -20,6 +20,8 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+После перезагрузки в grub должны быть доступны другие дистрибутивы и ос.
+
 [Grub efi](/wiki/other/grub-uefi/).
 
 ## Сброс root пароля
