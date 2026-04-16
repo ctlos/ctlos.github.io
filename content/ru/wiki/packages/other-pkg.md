@@ -58,7 +58,6 @@ sudo pacman -U имя.pkg.tar.zst
 ```bash
 sudo pacman -S virtualbox
 sudo pacman -S virtualbox-host-modules-arch
-sudo pacman -S virtualbox-guest-iso
 
 sudo modprobe vboxdrv
 sudo gpasswd -a имя_пользователя vboxusers
@@ -81,8 +80,7 @@ mkdir ~/vboxshare
 Настройка гостевых дополнений на виртуалке.
 
 ```bash
-sudo pacman -S virtualbox-guest-utils
-sudo pacman -S virtualbox-guest-iso
+sudo pacman -S virtualbox-guest-utils virtualbox-guest-iso xorg-xrandr
 ```
 
 Systemd сервис в поставке загрузит нужные модули ядра.
@@ -97,17 +95,37 @@ sudo systemctl enable --now vboxservice
 sudo usermod -aG vboxsf user_name
 ```
 
-Перезапустите виртуальную машину. Командами ниже создайте директорию и смонтируйте в нее.
+Перезапустите виртуальную машину. Если вы при создании общей директории выбрали авто подключение, то она уже доступна в `/media/sf_vboxshare` или в `/mnt`. Командой ниже можно перемонтировать в `~/vboxshare`.
 
 ```bash
 mkdir ~/vboxshare
 sudo mount -t vboxsf -o uid=1000,gid=1000 vboxshare vboxshare
 ```
 
-Если вы при создании общей директории выбрали авто подключение, то она уже доступна в `/media/sf_vboxshare` или в `/mnt`. Командой ниже можно перемонтировать в `~/vboxshare`.
+Если слетает разрешение виртуалки после ребута, или вовсе не работает.
 
 ```bash
-sudo mount -t vboxsf -o uid=1000,gid=1000 vboxshare vboxshare
+rm -f ~/.config/monitors.xml && rm -rf ~/.local/share/kscreen
+
+mkdir -p ~/.config/systemd/user
+nano ~/.config/systemd/user/vbox-resize.service
+###
+[Unit]
+Description=Force VirtualBox display resize
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xrandr --auto
+
+[Install]
+WantedBy=graphical-session.target
+```
+
+```bash
+# активировать сервис
+systemctl --user daemon-reload
+systemctl --user enable --now vbox-resize.service
 ```
 
 Еще можете попробовать виртуалку от GNOME.
