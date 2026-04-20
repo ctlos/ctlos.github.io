@@ -24,9 +24,9 @@ weight: 10
 
 - Тема gtk: модификация Qogir.
 - Иконки: Qogir-dark.
-- Курсор: capitaine-cursors.
+- Курсор: Qogir.
 - Шрифт: Clear Sans Medium `ttf-clear-sans`.
-- Шрифт терминала: uw-ttyp0(`otb-uw_ttyp0`), Hack Nerd Font Mono,9 `nerd-fonts-hack`.
+- Шрифт терминала: `ttf-jetbrains-mono-nerd`, `nerd-fonts-hack`.
 
 ## Панели
 
@@ -35,7 +35,7 @@ weight: 10
 Элементы:
 
 - Запуск меню: левый клик - rofi.
-- Urxvt с сессией tmux. Сессия сохраняется, при закрытии и восстанавливается, при следующем нажатии.
+- alacritty с сессией tmux. Сессия сохраняется, при закрытии и восстанавливается, при следующем нажатии.
 - Newsboat - rss читалка.
 - Монитор cpu и ram.
 - Доступные обновления, клик: pacui - псевдо графический менеджер пакетов.
@@ -79,7 +79,7 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 
 Ключ | Описание
 --- | ---
-`super + F1` | Справка по горячим клавишам на us.
+`super + alt + h` | Справка по горячим клавишам на us.
 `super + a` | Псевдо тайлинг.
 `super + s` | floating, плавающий режим.
 `super + d` | тайлинг.
@@ -100,7 +100,6 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 `alt + tab` | Переключение окна на текущем теге.
 `super + tab` | Переключение на предыдущий тег.
 `super + {1-9,0}` | Переход на тег.
-`super + {q...o,0}` | Переход на тег.
 `super + alt + {←,→}` | Перемещение по тегам.
 `super + alt + {1-9,0}` | Отправка окна на номер тега.
 `super + ctrl + p` | Скрыть/показать polybar.
@@ -126,7 +125,7 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 `super + Print`        | скрин в режиме выделения.
 `super + alt + Print`  | скрин с задержкой 5 сек. и отправкой в `~/Pictures/screen`(директория должна быть). Копируется в буфер.
 `super + alt + m`      | Текущий трек в ncmpcpp.
-`ctrl + alt + {c,v}`   | Копировать/вставить в терминале.
+`ctrl + shift + {c,v}`   | Копировать/вставить в терминале.
 
 ## Конфигурационные файлы
 
@@ -140,8 +139,8 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 ~/.config/bspwm/polybar | Скрипты и конфиг polybar.
 ~/.config/tint2/tray.tint2rc | Конфиг tint2 трей. В меню есть gui-конфигуратор (Настройки tint).
 ~/.config/picom.conf | Декоратор окон, композитный менеджер.
-~/.Xresources | Конфиг Urxvt терминала. После изменения файла выполнить `xrdb -merge $HOME/.Xresources`.
-~/.colors | Палитры терминала, указывать в `~/.Xresources` строка `#include ".colors/sn"`.
+<!-- ~/.Xresources | Конфиг Urxvt терминала. После изменения файла выполнить `xrdb -merge $HOME/.Xresources`.
+~/.colors | Палитры терминала, указывать в `~/.Xresources` строка `#include ".colors/sn"`. -->
 ~/.zshrc | Конфиг оболочки $SHELL.
 ~/.alias_zsh | Алиасы и функции zsh, сокращения команд терминала.
 
@@ -151,26 +150,26 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 
 Name | Описание
 --- | ---
-neofetch, fetch | информация о системе. `~/.bin/fetch`.
-lxappearance, qt5ct | настройка внешнего вида.
+fastfetch | краткоя информация о системе.
+lxappearance, qt5ct, qt6ct, kvantum | настройка внешнего вида.
 lxrandr | разрешение экрана.
-gotop | Консольный системный монитор.
+bottom/`btm` | Консольный системный монитор.
 gufw | межсетевой экран.
 ranger, thunar | файловые менеджеры.
 fzf | инкрементальный поиск, `zz`.
-nano, micro | консольный текстовый редактор, привычные клавиши:) ctrl+s - сохранить, ctrl+q - выход и т.д.
+nano, micro | консольный текстовый редактор, `micro` привычные клавиши:) ctrl+s - сохранить, ctrl+q - выход и т.д.
 leafpad | Gui текстовый редактор.
 xreader | просмотр pdf.
 viewnior | просмотр изображений.
 ncmpcpp, audacious | музыкальный плеер.
 cava | визуализатор.
 mpv, smplayer | видео плеер.
-youtube-dl, straw-viewer, streamlink | скачивание, просмотр, просмотр стриминга.
-simplescreenrecorder | Запись экрана.
+youtube-dl, pipe-viewer, streamlink | скачивание, просмотр, просмотр стриминга.
+obs-studio | Запись экрана.
 flameshot | скриншоты.
 keepassxc | менеджер паролей.
 veracrypt | шифрование файлов.
-pavucontrol | управление звуком.
+pavucontrol-qt | управление звуком.
 file-roller | менеджер архивов.
 timeshift | резервное копирование.
 tmux | терминальный мультиплексор.

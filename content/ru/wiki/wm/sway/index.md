@@ -11,7 +11,7 @@ menu:
     title: "Sway wm"
     parent: "wm"
 weight: 30
-draft: false
+draft: true
 toc: true
 comments: true
 edit: true

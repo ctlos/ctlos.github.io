@@ -74,24 +74,18 @@ nano /etc/pacman.conf
 
 [ctlos_repo]
 Server = https://github.com/ctlos/$repo/raw/master/$arch
-Server = https://osdn.net/projects/ctlos/storage/$repo/$arch
-Server = https://cvc.keybase.pub/$repo
+Server = https://git.sr.ht/~cvc/$repo/blob/main/$arch
 ```
 
 ## Ctlos aur
-
-Можете воспользоваться [Ctlos aur](https://cloud.ctlos.ru/ctlos-aur) репозиторием, пакетов не так много, но он содержит последнии версии пакетов.
 
 ```bash
 nano /etc/pacman.conf
 
 [ctlos-aur]
 SigLevel = Optional TrustAll
-Server = https://cloud.ctlos.ru/ctlos-aur
+Server = https://raw.githubusercontent.com/ctlos/$repo/master/$arch
+Server = https://git.sr.ht/~cvc/$repo/blob/main/$arch
 ```
-
-### Зеркала
-
-- https://ctlos.fission.app/
 
 > Если Вы заметите какие-либо проблемы в репозиториях, сообщите в [Telegram Chat](https://telegram.me/ctlos).

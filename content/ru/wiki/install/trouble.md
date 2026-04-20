@@ -6,7 +6,9 @@ menu:
 weight: 50
 ---
 
-Некоторые решенные проблемы описаны на форуме [forum.ctlos.ru](https://forum.ctlos.ru/c/tehnicheskie-problemy-i-pomoshh/5). Нашли проблему, или есть идеи, как что-то улучшить, создайте тему на форуме(ссылка выше), либо запрос на [github](https://github.com/ctlos/ctlosiso/issues).
+<!-- Некоторые решенные проблемы описаны на форуме [forum.ctlos.ru](https://forum.ctlos.ru/c/tehnicheskie-problemy-i-pomoshh/5). -->
+
+Нашли проблему, или есть идеи, как что-то улучшить, создайте тему на форуме(ссылка выше), либо запрос на [github](https://github.com/ctlos/ctlosiso/issues).
 
 ## Grub
 
@@ -30,9 +32,15 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Thunar
 
-Генерация пунктов в левом меню.
+Генерация пунктов в левом меню и в домашней директории, стандартые директории. Я привык их величать на en, если остались старые можно удалить.
 
 ```bash
+# на en_US
+LC_MESSAGES=C xdg-user-dirs-update
+# или
+LC_MESSAGES=C xdg-user-dirs-gtk-update
+
+# на ру
 xdg-user-dirs-gtk-update
 ```
 
