@@ -24,8 +24,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 После перезагрузки в grub должны быть доступны другие дистрибутивы и ос.
 
-[Grub efi](/wiki/other/grub-uefi/).
-
 ## Сброс root пароля
 
 [Reset_root_password](https://wiki.archlinux.org/index.php/Reset_root_password_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)).

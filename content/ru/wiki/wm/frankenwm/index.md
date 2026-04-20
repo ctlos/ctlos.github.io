@@ -5,7 +5,7 @@ menu:
   wiki:
     title: FrankenWm
     parent: "wm"
-weight: 20
+weight: 60
 ---
 
 ![FrankenWm](frankenwm010.png)
@@ -86,7 +86,7 @@ sudo make clean install
 Ключ                   | Описание
 --- | ---
 `alt + shift`          | Переключение раскладки(us,ru).
-`super+shift+Enter`    | Terminal urxvt.
+`super+shift+Enter`    | Terminal.
 `super+r`              | Rofi - меню(лаунчер).
 `super+q`              | Закрыть окно.
 `super+ctrl+q`         | Закрыть frankenwm.

@@ -61,7 +61,7 @@ dhclient
 Через сервис **systemd**, создайте скрипт для подключенияю
 
 ```bash
-sudo nano /usr/local/wifi.sh
+sudo nano /usr/local/bin/wifi.sh
 ```
 
 ```bash
@@ -82,7 +82,7 @@ Before=network.target
 Wants=network.target
 
 [Service]
-ExecStart=/usr/local/wifi.sh
+ExecStart=/usr/local/bin/wifi.sh
 
 [Install]
 WantedBy=default.target
@@ -91,7 +91,7 @@ WantedBy=default.target
 ## Назначение прав и включение сервиса
 
 ```bash
-chmod 744 /usr/local/wifi.sh
+chmod 744 /usr/local/bin/wifi.sh
 chmod 664 /etc/systemd/system/wifi.service
 systemctl daemon-reload
 systemctl enable wifi.service

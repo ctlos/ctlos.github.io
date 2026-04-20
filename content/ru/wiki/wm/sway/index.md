@@ -3,7 +3,7 @@ title: "Swaywm тайловый менеджер окон"
 description: ""
 lead: ""
 date: 2021-10-29T14:35:08+03:00
-lastmod: 2021-10-29T14:35:08+03:00
+lastmod: 2026-04-20T14:35:08+03:00
 images: ["sway.png"]
 post_video:
 menu: 
@@ -79,7 +79,7 @@ Sway — тайловый оконный менеджер wayland, почти а
 --- | ---
 `alt+shift`            | Переключение раскладки(us,ru).
 `super+shift+r`        | Рестарт, перечитать конфиг.
-`super+Return`         | Терминал kitty.
+`super+Return`         | Терминал.
 `super+shift+Return`   | Плавающий терминал.
 `super+z`              | Закрыть окно.
 `super+d`              | Wofi - меню(лаунчер).
@@ -98,4 +98,4 @@ Sway — тайловый оконный менеджер wayland, почти а
 - [Wiki sway](https://github.com/swaywm/sway/wiki)
 - [Arch wiki](https://wiki.archlinux.org/title/Sway)
 
-Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://telegram.me/ctlos), или прокомментируй на форуме(ссылка ниже).
+Комментарии приветствуются. Вступай в telegram чат: [t.me/ctlos](https://telegram.me/ctlos).

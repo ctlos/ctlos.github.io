@@ -8,7 +8,7 @@ menu:
 weight: 10
 ---
 
-![Bspwm](bspwm010.png)
+![Bspwm](bspwm.jpg)
 
 [Demo Video](https://www.youtube.com/watch?v=INOtQJ_yZE4).
 
@@ -150,7 +150,7 @@ mv ~/.config/bspwm/sxhkd/sxhkdrc.example ~/.config/bspwm/sxhkd/sxhkdrc
 
 Name | Описание
 --- | ---
-fastfetch | краткоя информация о системе.
+fastfetch | краткая информация о системе.
 lxappearance, qt5ct, qt6ct, kvantum | настройка внешнего вида.
 lxrandr | разрешение экрана.
 bottom/`btm` | Консольный системный монитор.
