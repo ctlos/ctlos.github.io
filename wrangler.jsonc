@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ctlos",
+  "compatibility_date": "2026-04-21",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "layouts"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
