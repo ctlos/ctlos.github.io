@@ -34,6 +34,10 @@ body {
   padding-bottom: 3rem;
 }
 
+article li {
+  margin-bottom: $spacer;
+}
+
 .content img {
   max-width: 100%;
 }
