@@ -6,7 +6,9 @@
         <h1>{{ .Title }}</h1>
         {{ partial "main/blog-meta.html" . }}
       </div>
+      {{ if .Params.lead -}}
       <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      {{ end -}}
       {{ .Content }}
     </article>
     {{ if not .Params.disableShare -}}
@@ -31,6 +33,10 @@
         {{ partial "main/discourse.html" . }}
       {{ end -}}
     {{ end */}}
+
+    {{ if and (ne .Params.comments false) (ne .Site.Params.options.comments false) -}}
+      <div class="giscus mt-5"></div>
+    {{ end -}}
   </div>
 </div>
 {{ end }}

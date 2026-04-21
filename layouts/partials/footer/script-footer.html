@@ -79,7 +79,7 @@
 
 {{ $js := $slice | resources.Concat "main.js" -}}
 
-{{ if and (eq (default .Type .Section) "wiki") (eq .Kind "page") (ne .Params.comments false) (ne .Site.Params.options.comments false) -}}
+{{ if and (in (slice "wiki" "changelog") (default .Type .Section)) (eq .Kind "page") (ne .Params.comments false) (ne .Site.Params.options.comments false) -}}
 <script src="https://giscus.app/client.js"
   data-repo="ctlos/ctlos.github.io"
   data-repo-id="MDEwOlJlcG9zaXRvcnkzMzU2ODYyMDc="
