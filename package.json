@@ -31,7 +31,9 @@
     "check": "exec-bin node_modules/.bin/hugo/hugo version",
     "copy:katex-fonts": "shx cp ./node_modules/katex/dist/fonts/* ./static/fonts/",
     "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "devDependencies": {
     "@babel/cli": "^7.15",
@@ -60,7 +62,8 @@
     "shx": "^0.3.3",
     "slick-carousel": "^1.8.1",
     "stylelint": "^13.13",
-    "stylelint-config-standard": "^22.0"
+    "stylelint-config-standard": "^22.0",
+    "wrangler": "^4.84.0"
   },
   "otherDependencies": {
     "hugo": "0.88.1"

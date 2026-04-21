@@ -5,3 +5,10 @@ resources
 # Local Netlify folder
 .netlify
 TODO
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
