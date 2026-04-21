@@ -29,7 +29,7 @@ comments: true
 
 > Прошу по возможности оказать поддержку путем доната, желательно на Ю.Мани [yoomoney.ru/transfer](https://yoomoney.ru/transfer): `410011749909586`, еще способы [/donat/](/donat/). **Цена вопроса ~ 1 500 р**
 
-![](reg.jpg)
+![reg ru](reg.jpg)
 
 ## Исходники
 
